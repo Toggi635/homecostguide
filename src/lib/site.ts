@@ -4,3 +4,11 @@
 // direct fetch on 2026-07-15: https://toggi635.github.io/homecostguide/ -> 200 (works),
 // https://toggi635.github.io/HomeCostGuide/ -> 404. Do not "fix" this back to mixed case.
 export const SITE_URL = "https://toggi635.github.io/homecostguide";
+
+export const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "HomeCostGuide",
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo.png`,
+};

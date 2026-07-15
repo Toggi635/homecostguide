@@ -25,12 +25,14 @@ export default function FAQAccordion({ items, title }: FAQAccordionProps) {
             <button
               className="w-full text-left px-4 py-3 bg-paper hover:bg-line/50 font-medium text-sm flex justify-between items-center transition-colors"
               onClick={() => setOpenIndex(openIndex === i ? null : i)}
+              aria-expanded={openIndex === i}
+              aria-controls={`faq-panel-${i}`}
             >
               <span className="text-ink">{item.question}</span>
               <ChevronDown size={16} className={`text-muted transition-transform duration-200 ${openIndex === i ? "rotate-180" : ""}`} />
             </button>
             {openIndex === i && (
-              <div className="px-4 py-3 text-sm text-muted border-t border-line">
+              <div id={`faq-panel-${i}`} className="px-4 py-3 text-sm text-muted border-t border-line">
                 {item.answer}
               </div>
             )}

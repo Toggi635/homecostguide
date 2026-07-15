@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const articleEntries = articles.map((a) => ({
     url: `${baseUrl}/${a.pillar}/${a.slug}/`,
-    lastModified: new Date("2026-01-15"),
+    lastModified: new Date(a.dateModified),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));

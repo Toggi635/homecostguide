@@ -1,24 +1,21 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
 import PillarCard from "@/components/PillarCard";
-import ArticleCard from "@/components/ArticleCard";
 import Button from "@/components/Button";
 import JsonLd from "@/components/JsonLd";
+import HomeSearch from "@/components/HomeSearch";
 import { pillars, getArticlesByTier } from "@/lib/content";
 import { SITE_URL } from "@/lib/site";
-import { Search, BadgeCheck, RefreshCw, FileText, Calculator } from "lucide-react";
+import { BadgeCheck, RefreshCw, FileText, Calculator } from "lucide-react";
+
+export const metadata = {
+  title: "HomeCostGuide – Real Home Improvement Cost Guides",
+  description:
+    "Get accurate, up-to-date home improvement cost guides. Roofing, HVAC, plumbing, electrical, remodeling, and maintenance costs with free calculators.",
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   const topArticles = getArticlesByTier("A");
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const filteredArticles = searchQuery
-    ? topArticles.filter((a) =>
-        a.title.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : topArticles;
 
   const websiteSchema = {
     "@context": "https://schema.org",
@@ -53,16 +50,6 @@ export default function HomePage() {
           <p className="text-lg text-muted mb-6">
             Transparent, researched pricing guides for roofing, HVAC, plumbing, electrical, remodeling, and home maintenance. No guesswork.
           </p>
-          <div className="relative max-w-md mb-6">
-            <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted" />
-            <input
-              type="text"
-              placeholder="e.g., cost to replace a roof..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full rounded-btn border border-line bg-white pl-10 pr-4 py-3 text-sm shadow-soft focus:ring-2 focus:ring-rust/40 focus:border-rust outline-none transition-shadow"
-            />
-          </div>
           <Button href="/calculators/" variant="primary">
             <Calculator size={16} />
             Browse Cost Calculators
@@ -119,15 +106,7 @@ export default function HomePage() {
 
       <section className="mb-12">
         <h2 className="text-2xl font-serif font-semibold text-ink mb-6">Most Searched Cost Guides</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filteredArticles.length > 0 ? (
-            filteredArticles.map((a) => (
-              <ArticleCard key={a.id} article={a} />
-            ))
-          ) : (
-            <p className="text-muted text-sm col-span-full">No guides match your search.</p>
-          )}
-        </div>
+        <HomeSearch topArticles={topArticles} />
       </section>
 
       <section className="mb-12 bg-white border border-line rounded-card p-8 shadow-soft">

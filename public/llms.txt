@@ -1,0 +1,21 @@
+# HomeCostGuide
+
+HomeCostGuide provides transparent, sourced home improvement cost guides for U.S. homeowners. Every guide includes a national average cost, a low-to-high range, the original data source, and free interactive cost calculators where applicable.
+
+## Categories
+
+- Roofing & Exterior: https://toggi635.github.io/homecostguide/roofing-exterior/
+- HVAC & Energy: https://toggi635.github.io/homecostguide/hvac-energy/
+- Plumbing & Water Systems: https://toggi635.github.io/homecostguide/plumbing/
+- Electrical: https://toggi635.github.io/homecostguide/electrical/
+- Kitchen & Bathroom Remodeling: https://toggi635.github.io/homecostguide/kitchen-bath/
+- Flooring, Painting & Interior Renovation: https://toggi635.github.io/homecostguide/interior-renovation/
+- Home Maintenance & Repair Decisions: https://toggi635.github.io/homecostguide/home-maintenance/
+
+## Methodology
+
+All cost figures are sourced from published industry data (HomeGuide, Angi, Fixr, BLS, and similar aggregators/agencies) and reviewed at least annually. Full methodology: https://toggi635.github.io/homecostguide/methodology/
+
+## About
+
+https://toggi635.github.io/homecostguide/about/

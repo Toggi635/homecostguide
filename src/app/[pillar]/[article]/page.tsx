@@ -29,7 +29,8 @@ export function generateMetadata({ params }: { params: { pillar: string; article
   if (!article) return {};
   return {
     title: article.title,
-    description: `Find out the ${article.targetKeyword} with our 2026 guide. National average, low-high range, and free cost calculator.`,
+    description: article.metaDescription,
+    alternates: { canonical: `/${article.pillar}/${article.slug}/` },
   };
 }
 
@@ -66,14 +67,30 @@ export default async function ArticlePage({ params }: { params: { pillar: string
 
   const mdxSource = await getMDXSource(article.slug);
 
+  const faqItems = [
+    { question: `What is the average ${article.targetKeyword}?`, answer: `The national average for this project ranges from ${article.costLow} to ${article.costHigh}, with most homeowners spending around ${article.costAvg}${article.costUnit}. Your actual cost depends on size, materials, and location. Source: ${article.costSource}.` },
+    { question: "How often should I replace or service this?", answer: "Typical lifespan varies by product and usage. Check the manufacturer guidelines and consider annual inspections to maximize longevity." },
+    { question: "Does homeowners insurance cover this?", answer: "Standard homeowners policies cover sudden damage but not gradual wear and tear. Review your policy or speak with your agent about specific coverage." },
+    { question: "Can I finance this project?", answer: "Many contractors offer financing options, or you can explore home equity loans, personal loans, or credit cards with promotional APRs for larger projects." },
+  ];
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: article.title,
-    description: `Find out the ${article.targetKeyword} with our 2026 guide.`,
-    dateModified: "2026-01-15",
-    author: { "@type": "Person", name: "HomeCostGuide Team" },
-    publisher: { "@type": "Organization", name: "HomeCostGuide" },
+    description: article.metaDescription,
+    datePublished: article.datePublished,
+    dateModified: article.dateModified,
+    author: { "@type": "Organization", name: "HomeCostGuide", url: SITE_URL },
+    publisher: {
+      "@type": "Organization",
+      name: "HomeCostGuide",
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/${article.pillar}/${article.slug}/`,
+    },
   };
 
   const breadcrumbSchema = {
@@ -89,24 +106,14 @@ export default async function ArticlePage({ params }: { params: { pillar: string
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: `What is the average ${article.targetKeyword}?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "The national average cost varies by project specifics. Use our calculator above for a personalized estimate.",
-        },
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
       },
-      {
-        "@type": "Question",
-        name: "Is it better to repair or replace?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "This depends on the age of your system and the cost of repair relative to replacement. Our decision tool above can help you decide.",
-        },
-      },
-    ],
+    })),
   };
 
   return (
@@ -168,12 +175,7 @@ export default async function ArticlePage({ params }: { params: { pillar: string
 
       <FAQAccordion
         title="Frequently Asked Questions"
-        items={[
-          { question: `What is the average ${article.targetKeyword}?`, answer: `The national average for this project ranges from ${article.costLow} to ${article.costHigh}, with most homeowners spending around ${article.costAvg}${article.costUnit}. Your actual cost depends on size, materials, and location. Source: ${article.costSource}.` },
-          { question: "How often should I replace or service this?", answer: "Typical lifespan varies by product and usage. Check the manufacturer guidelines and consider annual inspections to maximize longevity." },
-          { question: "Does homeowners insurance cover this?", answer: "Standard homeowners policies cover sudden damage but not gradual wear and tear. Review your policy or speak with your agent about specific coverage." },
-          { question: "Can I finance this project?", answer: "Many contractors offer financing options, or you can explore home equity loans, personal loans, or credit cards with promotional APRs for larger projects." },
-        ]}
+        items={faqItems}
       />
 
       <FindAProCTA

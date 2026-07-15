@@ -1,13 +1,28 @@
 import type { Metadata } from "next";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "How We Calculate Costs",
   description: "Our methodology for researching and calculating home improvement cost guides. Transparent, sourced, and annually updated.",
+  alternates: { canonical: "/methodology/" },
 };
 
 export default function MethodologyPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+      { "@type": "ListItem", position: 2, name: "Methodology" },
+    ],
+  };
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
+      <JsonLd data={breadcrumbSchema} />
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Methodology" }]} />
       <h1 className="text-3xl font-bold mb-6">How We Calculate Costs</h1>
       <div className="prose prose-gray max-w-none">
         <p className="lead">

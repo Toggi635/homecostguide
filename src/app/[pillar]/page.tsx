@@ -15,7 +15,8 @@ export function generateMetadata({ params }: { params: { pillar: string } }) {
   if (!pillar) return {};
   return {
     title: `${pillar.name} Cost Guides`,
-    description: pillar.description,
+    description: pillar.metaDescription,
+    alternates: { canonical: `/${pillar.slug}/` },
   };
 }
 
@@ -45,10 +46,19 @@ export default function PillarPage({ params }: { params: { pillar: string } }) {
     })),
   };
 
+  const collectionPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: `${pillar.name} Cost Guides`,
+    description: pillar.description,
+    url: `${SITE_URL}/${pillar.slug}/`,
+  };
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <JsonLd data={breadcrumbListSchema} />
       <JsonLd data={itemListSchema} />
+      <JsonLd data={collectionPageSchema} />
 
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: pillar.name }]} />
 

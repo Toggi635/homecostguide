@@ -1,13 +1,28 @@
 import type { Metadata } from "next";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Us",
   description: "Learn about HomeCostGuide and our mission to provide transparent, accurate home improvement cost information.",
+  alternates: { canonical: "/about/" },
 };
 
 export default function AboutPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+      { "@type": "ListItem", position: 2, name: "About" },
+    ],
+  };
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
+      <JsonLd data={breadcrumbSchema} />
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "About" }]} />
       <h1 className="text-3xl font-bold mb-6">About HomeCostGuide</h1>
       <div className="prose prose-gray max-w-none">
         <p>

@@ -1,13 +1,28 @@
 import type { Metadata } from "next";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Editorial Guidelines",
   description: "Our editorial standards for accuracy, transparency, and integrity in home improvement cost reporting.",
+  alternates: { canonical: "/editorial-guidelines/" },
 };
 
 export default function EditorialGuidelinesPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+      { "@type": "ListItem", position: 2, name: "Editorial Guidelines" },
+    ],
+  };
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
+      <JsonLd data={breadcrumbSchema} />
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Editorial Guidelines" }]} />
       <h1 className="text-3xl font-bold mb-6">Editorial Guidelines</h1>
       <div className="prose prose-gray max-w-none">
         <h2>Accuracy First</h2>

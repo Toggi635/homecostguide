@@ -2,17 +2,32 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { articles } from "@/lib/content";
 import { Calculator } from "lucide-react";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "All Cost Calculators & Tools",
   description: "Browse all free home improvement cost calculators and interactive tools from HomeCostGuide.",
+  alternates: { canonical: "/calculators/" },
 };
 
 export default function CalculatorsPage() {
   const calculatorArticles = articles.filter((a) => a.format === "calculator");
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+      { "@type": "ListItem", position: 2, name: "Calculators" },
+    ],
+  };
+
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
+      <JsonLd data={breadcrumbSchema} />
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Calculators" }]} />
       <div className="flex items-center gap-3 mb-6">
         <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-rust/10 text-rust-dark">
           <Calculator size={22} />
