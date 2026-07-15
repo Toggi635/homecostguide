@@ -1,0 +1,2 @@
+# Placeholder ads.txt — replace with your real AdSense publisher line before going live.
+# Format: google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

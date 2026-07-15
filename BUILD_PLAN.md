@@ -225,6 +225,8 @@ Applied to 3 utilities where autocomplete confirmed household-size-segmented dem
 
 ## 9. Monetization Plan
 
+**Affiliate integrations are intentionally deferred — not part of the current build. AdSense-only for now.**
+
 - **AdSense placement by page type:**
   - Article pages: 1 unit after intro/first cost table, 1 in-content unit after ~40% scroll, 1 unit before FAQ, optional sticky sidebar unit on desktop. Avoid stacking units around the calculator itself (bad UX, risk of invalid clicks).
   - Pillar pages: 1 unit below intro, 1 unit mid-grid.

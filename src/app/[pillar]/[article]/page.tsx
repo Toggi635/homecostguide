@@ -12,7 +12,7 @@ import HouseholdBillTable from "@/components/HouseholdBillTable";
 import TableOfContents from "@/components/TableOfContents";
 import FAQAccordion from "@/components/FAQAccordion";
 import RelatedArticles from "@/components/RelatedArticles";
-import LeadGenCTA from "@/components/LeadGenCTA";
+import FindAProCTA from "@/components/FindAProCTA";
 import AdSlot from "@/components/AdSlot";
 import JsonLd from "@/components/JsonLd";
 import fs from "fs";
@@ -170,9 +170,8 @@ export default async function ArticlePage({ params }: { params: { pillar: string
         ]}
       />
 
-      <LeadGenCTA
+      <FindAProCTA
         partnerName={pillar.name.toLowerCase().includes("hvac") ? "HVAC pros" : `${pillar.name.toLowerCase()} pros`}
-        affiliateUrl={process.env.NEXT_PUBLIC_LEAD_GEN_URL || "#"}
       />
 
       <RelatedArticles currentArticle={article} />

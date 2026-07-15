@@ -15,9 +15,21 @@ export const metadata: Metadata = {
     "Get accurate, up-to-date home improvement cost guides. Roofing, HVAC, plumbing, electrical, remodeling, and maintenance costs with free calculators.",
 };
 
+const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
+const isRealAdsenseId = adsenseId && adsenseId !== "ca-pub-0000000000000000";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        {isRealAdsenseId && (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
+            crossOrigin="anonymous"
+          />
+        )}
+      </head>
       <body className={inter.className}>
         <Nav />
         <main className="min-h-screen">{children}</main>
