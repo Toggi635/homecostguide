@@ -67,7 +67,7 @@ export default function CostCalculator({ title, fields, formula, baseUnit }: Cos
       </div>
       <div className="mt-6 pt-4 border-t border-line">
         <p className="text-sm text-muted mb-2">Estimated Cost Range</p>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="text-center">
             <p className="text-xs text-muted">Low</p>
             <p className="text-xl font-bold font-serif text-forest">${result.low.toLocaleString()}</p>

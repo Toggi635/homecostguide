@@ -27,7 +27,7 @@ export default function HomeSearch({ topArticles }: HomeSearchProps) {
           placeholder="e.g., cost to replace a roof..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full rounded-btn border border-line bg-white pl-10 pr-4 py-3 text-sm shadow-soft focus:ring-2 focus:ring-rust/40 focus:border-rust outline-none transition-shadow"
+          className="w-full rounded-btn border border-line bg-white pl-10 pr-4 py-3.5 text-sm shadow-soft focus:ring-2 focus:ring-rust/40 focus:border-rust outline-none transition-shadow"
         />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

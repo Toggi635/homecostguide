@@ -28,6 +28,11 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
 const isRealAdsenseId = adsenseId && adsenseId !== "ca-pub-0000000000000000";
 

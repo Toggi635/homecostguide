@@ -23,7 +23,7 @@ export default function FAQAccordion({ items, title }: FAQAccordionProps) {
         {items.map((item, i) => (
           <div key={i} className="border border-line rounded-card overflow-hidden">
             <button
-              className="w-full text-left px-4 py-3 bg-paper hover:bg-line/50 font-medium text-sm flex justify-between items-center transition-colors"
+              className="w-full text-left px-4 py-3 min-h-[44px] bg-paper hover:bg-line/50 font-medium text-sm flex justify-between items-center transition-colors"
               onClick={() => setOpenIndex(openIndex === i ? null : i)}
               aria-expanded={openIndex === i}
               aria-controls={`faq-panel-${i}`}

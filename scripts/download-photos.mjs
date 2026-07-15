@@ -59,57 +59,57 @@ const PHOTO_MAP = {
   "roof-repair-vs-replacement":         { heroId: "1770149682967-5733992e49ff", formatId: "1546668586-fc282cc41974" },
   "cost-to-replace-windows":            { heroId: "1753717202565-ee088d9871fc", formatId: "1564013799919-ab600027ffc6" },
   "cost-to-install-a-fence":           { heroId: "1722881445875-bdd5f4d9e6fa", formatId: "1770306924587-7884ec2753a2" },
-  "gutter-installation-cost":           { heroId: "1770306924587-7884ec2753a2", formatId: "1722881445875-bdd5f4d9e6fa" },
+  "gutter-installation-cost":           { heroId: "1763665814605-a6489a3bf2a0", formatId: "1722881445875-bdd5f4d9e6fa" },
   "metal-roof-vs-asphalt-shingle":      { heroId: "1472342139520-1aa49517fed8", formatId: "1763665814605-a6489a3bf2a0" },
   "cost-to-build-a-deck":               { heroId: "1687266152952-540777e6e8c8", formatId: "1704307023984-813727deade9" },
   "cost-to-replace-a-driveway":         { heroId: "1772852340517-b11ec88979fc", formatId: "1667830502449-d5a2039204d6" },
   "hvac-repair-vs-replace":             { heroId: "1757219525975-03b5984bc6e8", formatId: "1773952137490-2bea3f95ed39" },
-  "new-hvac-system-cost":               { heroId: "1780445392462-b7761551820c", formatId: "1757219525975-03b5984bc6e8" },
+  "new-hvac-system-cost":               { heroId: "1757219525975-03b5984bc6e8", formatId: "1773952137490-2bea3f95ed39" },
   "average-electric-bill-by-household-size": { heroId: "1773952137490-2bea3f95ed39", formatId: "1780445392462-b7761551820c" },
   "cost-to-install-solar-panels":       { heroId: "1780445392792-556e5609c5ab", formatId: "1668097613569-3405bb63262b" },
   "furnace-repair-vs-replace":          { heroId: "1773952137490-2bea3f95ed39", formatId: "1757219525975-03b5984bc6e8" },
-  "cost-to-install-attic-insulation":   { heroId: "1780445392462-b7761551820c", formatId: "1773952137490-2bea3f95ed39" },
+  "cost-to-install-attic-insulation":   { heroId: "1564013799919-ab600027ffc6", formatId: "1773952137490-2bea3f95ed39" },
   "ac-repair-vs-replace":               { heroId: "1757219525975-03b5984bc6e8", formatId: "1773952137490-2bea3f95ed39" },
-  "remove-and-install-attic-insulation":{ heroId: "1780445392462-b7761551820c", formatId: "1757219525975-03b5984bc6e8" },
+  "remove-and-install-attic-insulation":{ heroId: "1564013799919-ab600027ffc6", formatId: "1757219525975-03b5984bc6e8" },
   "cost-to-install-central-air-without-ducts": { heroId: "1773952137490-2bea3f95ed39", formatId: "1780445392462-b7761551820c" },
   "cost-to-replace-water-heater":       { heroId: "1575299737366-39c143459bc5", formatId: "1780445392462-b7761551820c" },
-  "cost-to-repipe-a-house-pex-vs-copper": { heroId: "1780445392462-b7761551820c", formatId: "1575299737366-39c143459bc5" },
+  "cost-to-repipe-a-house-pex-vs-copper": { heroId: "1575299737366-39c143459bc5", formatId: "1753272691001-4d68806ac590" },
   "average-water-bill-by-household-size": { heroId: "1575299737366-39c143459bc5", formatId: "1780445392462-b7761551820c" },
-  "sewer-line-repair-cost":             { heroId: "1780445392462-b7761551820c", formatId: "1575299737366-39c143459bc5" },
+  "sewer-line-repair-cost":             { heroId: "1575299737366-39c143459bc5", formatId: "1780445392628-d6f5b9e5609b" },
   "cost-to-install-water-softener":     { heroId: "1575299737366-39c143459bc5", formatId: "1780445392462-b7761551820c" },
   "cost-to-replace-electrical-panel":   { heroId: "1753272691001-4d68806ac590", formatId: "1773952136583-5175e906267c" },
   "cost-to-install-a-generator":        { heroId: "1509390144018-eeaf65052242", formatId: "1773952136583-5175e906267c" },
-  "cost-to-install-ev-charger":         { heroId: "1773952136583-5175e906267c", formatId: "1753272691001-4d68806ac590" },
+  "cost-to-install-ev-charger":         { heroId: "1509390144018-eeaf65052242", formatId: "1753272691001-4d68806ac590" },
   "generator-vs-battery-backup-cost":   { heroId: "1509390144018-eeaf65052242", formatId: "1773952136583-5175e906267c" },
-  "cost-to-upgrade-to-200-amp-panel":   { heroId: "1773952136583-5175e906267c", formatId: "1753272691001-4d68806ac590" },
+  "cost-to-upgrade-to-200-amp-panel":   { heroId: "1753272691001-4d68806ac590", formatId: "1509390144018-eeaf65052242" },
   "average-kitchen-remodel-cost":       { heroId: "1769745241584-be9b8227e126", formatId: "1774437290626-34d18c49598a" },
-  "bathroom-remodel-cost-by-size":      { heroId: "1721743138130-e8ce6e1a7dce", formatId: "1723257891127-0d1ea314a720" },
-  "kitchen-remodel-cost-without-appliances": { heroId: "1774437290626-34d18c49598a", formatId: "1769745241584-be9b8227e126" },
-  "small-bathroom-remodel-cost":        { heroId: "1723257891127-0d1ea314a720", formatId: "1721743138130-e8ce6e1a7dce" },
-  "cabinet-refacing-vs-replacement-cost": { heroId: "1774437290626-34d18c49598a", formatId: "1769745241584-be9b8227e126" },
+  "bathroom-remodel-cost-by-size":      { heroId: "1769745241584-be9b8227e126", formatId: "1723257891127-0d1ea314a720" },
+  "kitchen-remodel-cost-without-appliances": { heroId: "1769745241584-be9b8227e126", formatId: "1774437290626-34d18c49598a" },
+  "small-bathroom-remodel-cost":        { heroId: "1769745241584-be9b8227e126", formatId: "1721743138130-e8ce6e1a7dce" },
+  "cabinet-refacing-vs-replacement-cost": { heroId: "1769745241584-be9b8227e126", formatId: "1774437290626-34d18c49598a" },
   "cost-to-replace-countertops":        { heroId: "1769745241584-be9b8227e126", formatId: "1774437290626-34d18c49598a" },
   "is-a-kitchen-remodel-worth-it":      { heroId: "1769745241584-be9b8227e126", formatId: "1774437290626-34d18c49598a" },
   "cost-to-finish-a-basement":          { heroId: "1564013799919-ab600027ffc6", formatId: "1687266152952-540777e6e8c8" },
-  "cost-to-paint-a-house":              { heroId: "1704307023984-813727deade9", formatId: "1667830502449-d5a2039204d6" },
+  "cost-to-paint-a-house":              { heroId: "1564013799919-ab600027ffc6", formatId: "1667830502449-d5a2039204d6" },
   "cost-to-replace-flooring-by-type":   { heroId: "1687266152952-540777e6e8c8", formatId: "1564013799919-ab600027ffc6" },
   "cost-to-add-bathroom-to-basement":   { heroId: "1564013799919-ab600027ffc6", formatId: "1723257891127-0d1ea314a720" },
   "cost-to-replace-interior-doors":     { heroId: "1769745241584-be9b8227e126", formatId: "1774437290626-34d18c49598a" },
   "drywall-repair-vs-replace-cost":     { heroId: "1769977453410-02f774fb8fef", formatId: "1564013799919-ab600027ffc6" },
   "is-it-worth-it-to-replace-windows":  { heroId: "1753717202565-ee088d9871fc", formatId: "1564013799919-ab600027ffc6" },
   "mold-remediation-cost-by-square-footage": { heroId: "1769977453410-02f774fb8fef", formatId: "1564013799919-ab600027ffc6" },
-  "cost-to-remove-a-tree":              { heroId: "1770306924587-7884ec2753a2", formatId: "1667830502449-d5a2039204d6" },
+  "cost-to-remove-a-tree":              { heroId: "1667830502449-d5a2039204d6", formatId: "1770306924587-7884ec2753a2" },
   "average-cost-of-homeowners-insurance": { heroId: "1564013799919-ab600027ffc6", formatId: "1667830502449-d5a2039204d6" },
   "refrigerator-repair-vs-replace":     { heroId: "1769745241584-be9b8227e126", formatId: "1774437290626-34d18c49598a" },
   "garage-door-repair-vs-replace":      { heroId: "1667830502449-d5a2039204d6", formatId: "1770306924587-7884ec2753a2" },
   "garage-door-worth-it-before-selling": { heroId: "1667830502449-d5a2039204d6", formatId: "1770306924587-7884ec2753a2" },
   "termite-damage-repair-cost":         { heroId: "1769977453410-02f774fb8fef", formatId: "1564013799919-ab600027ffc6" },
-  "how-much-value-does-a-pool-add":     { heroId: "1658190579991-65472a8b7b05", formatId: "1663293761270-8fafc94e2087" },
+  "how-much-value-does-a-pool-add":     { heroId: "1663293761270-8fafc94e2087", formatId: "1658190579991-65472a8b7b05" },
   "annual-home-maintenance-cost-calculator": { heroId: "1667830502449-d5a2039204d6", formatId: "1770306924587-7884ec2753a2" },
 };
 
 const PILLAR_PHOTOS = {
   "roofing-exterior":    { id: "1763665814605-a6489a3bf2a0", photographer: "Sergej Karpow" },
-  "hvac-energy":         { id: "1780445392462-b7761551820c", photographer: "Unsplash" },
+  "hvac-energy":         { id: "1757219525975-03b5984bc6e8", photographer: "Unsplash" },
   "plumbing":            { id: "1575299737366-39c143459bc5", photographer: "Michal Balog" },
   "electrical":          { id: "1753272691001-4d68806ac590", photographer: "Unsplash" },
   "kitchen-bath":        { id: "1769745241584-be9b8227e126", photographer: "Unsplash" },
@@ -150,8 +150,10 @@ function download(url, dest) {
   });
 }
 
-function getPhotoUrl(id, width = 1200) {
-  return `https://images.unsplash.com/photo-${id}?w=${width}&q=80&auto=format`;
+function getPhotoUrl(id, width = 1200, height, quality = 75) {
+  let url = `https://images.unsplash.com/photo-${id}?w=${width}&q=${quality}&auto=format`;
+  if (height) url += `&h=${height}&fit=crop`;
+  return url;
 }
 
 // ---- Main ----
@@ -170,7 +172,7 @@ async function main() {
 
     // Hero
     try {
-      await download(getPhotoUrl(info.heroId, 1200), path.join(dir, "hero.jpg"));
+      await download(getPhotoUrl(info.heroId, 1200, 630, 75), path.join(dir, "hero.jpg"));
       const p = PHOTO_IDS[info.heroId] || { photographer: "Unknown" };
       sources.hero[slug] = { source: `https://unsplash.com/photos/${info.heroId}`, photographer: p.photographer };
       success++;
@@ -182,7 +184,7 @@ async function main() {
 
     // Format
     try {
-      await download(getPhotoUrl(info.formatId, 800), path.join(dir, "format.jpg"));
+      await download(getPhotoUrl(info.formatId, 800, 500, 75), path.join(dir, "format.jpg"));
       const p = PHOTO_IDS[info.formatId] || { photographer: "Unknown" };
       sources.format[slug] = { source: `https://unsplash.com/photos/${info.formatId}`, photographer: p.photographer };
     } catch (err) {
@@ -202,7 +204,7 @@ async function main() {
   console.log("\n--- Pillar photos ---");
   for (const [slug, info] of Object.entries(PILLAR_PHOTOS)) {
     try {
-      await download(getPhotoUrl(info.id, 1200), path.join(PILLAR_DIR, `${slug}.jpg`));
+      await download(getPhotoUrl(info.id, 1200, 400, 75), path.join(PILLAR_DIR, `${slug}.jpg`));
       sources.pillar[slug] = { source: `https://unsplash.com/photos/${info.id}`, photographer: info.photographer };
       console.log(`  pillar ${slug}.jpg OK`);
     } catch (err) {

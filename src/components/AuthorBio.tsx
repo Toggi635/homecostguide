@@ -9,7 +9,7 @@ export default function AuthorBio({ name = "HomeCostGuide Team", credential = "H
       <div className="w-12 h-12 rounded-full bg-rust/10 flex items-center justify-center text-rust font-bold font-serif text-lg">
         {name.charAt(0)}
       </div>
-      <div>
+      <div className="min-w-0">
         <p className="font-medium text-sm text-ink">{name}</p>
         <p className="text-xs text-muted">{credential}</p>
       </div>
