@@ -6,6 +6,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import AuthorBio from "@/components/AuthorBio";
 import CostRangeBox from "@/components/CostRangeBox";
 import CostCalculator from "@/components/CostCalculator";
+import ScopeCostCalculator from "@/components/ScopeCostCalculator";
 import ComparisonTable from "@/components/ComparisonTable";
 import RepairVsReplaceWidget from "@/components/RepairVsReplaceWidget";
 import HouseholdBillTable from "@/components/HouseholdBillTable";
@@ -40,6 +41,13 @@ async function getMDXSource(slug: string): Promise<string | null> {
   } catch {
     return null;
   }
+}
+
+// article.costLow/costAvg/costHigh are display strings like "$5,700" - parse to numbers
+// so real components (CostCalculator, RepairVsReplaceWidget) can use them for real math.
+function parseCost(value: string): number {
+  const n = Number(value.replace(/[^0-9.]/g, ""));
+  return Number.isFinite(n) ? n : 0;
 }
 
 const mdxComponents = {
@@ -137,24 +145,21 @@ export default async function ArticlePage({ params }: { params: { pillar: string
         )}
       </article>
 
-      {article.format !== "guide" && article.format !== "data-table" && (
-        <div className="my-8 bg-paper border border-line rounded-card p-6 shadow-soft">
-          <h2 id="calculator" className="text-xl font-serif font-semibold text-ink mb-4">
-            {article.format === "calculator" ? "Cost Calculator" :
-             article.format === "decision-table" ? "Repair vs Replace Tool" :
-             article.format === "comparison-table" ? "Comparison Tool" : "Interactive Tool"}
-          </h2>
-          <p className="text-sm text-muted mb-4">
-            Use the interactive tool below to estimate your specific project cost.
-          </p>
-          <div className="border-2 border-dashed border-line rounded-card p-8 text-center text-muted">
-            [{article.format === "calculator" ? "Interactive Cost Calculator" :
-              article.format === "decision-table" ? "Repair vs Replace Decision Tool" :
-              article.format === "comparison-table" ? "Comparison Table" :
-              article.format === "data-table" ? "Data Table" : "Interactive Tool"}
-            — configure with real data in content production phase]
-          </div>
-        </div>
+      {article.format === "calculator" && (
+        <ScopeCostCalculator
+          costLow={parseCost(article.costLow)}
+          costAvg={parseCost(article.costAvg)}
+          costHigh={parseCost(article.costHigh)}
+          sourceNote={`Based on ${article.costSource}. Adjust scope to match a smaller or larger project than average.`}
+        />
+      )}
+
+      {article.format === "decision-table" && (
+        <RepairVsReplaceWidget
+          systemName={pillar.name}
+          replacementCostLow={parseCost(article.costLow) * 4}
+          replacementCostHigh={parseCost(article.costHigh) * 4}
+        />
       )}
 
       <AdSlot placement="mid-content" />
@@ -164,7 +169,7 @@ export default async function ArticlePage({ params }: { params: { pillar: string
       <FAQAccordion
         title="Frequently Asked Questions"
         items={[
-          { question: `What is the average ${article.targetKeyword}?`, answer: `The national average for this project ranges from {{COST_LOW}} to {{COST_HIGH}}, with most homeowners spending around {{COST_AVG}}. Your actual cost depends on size, materials, and location.` },
+          { question: `What is the average ${article.targetKeyword}?`, answer: `The national average for this project ranges from ${article.costLow} to ${article.costHigh}, with most homeowners spending around ${article.costAvg}${article.costUnit}. Your actual cost depends on size, materials, and location. Source: ${article.costSource}.` },
           { question: "How often should I replace or service this?", answer: "Typical lifespan varies by product and usage. Check the manufacturer guidelines and consider annual inspections to maximize longevity." },
           { question: "Does homeowners insurance cover this?", answer: "Standard homeowners policies cover sudden damage but not gradual wear and tear. Review your policy or speak with your agent about specific coverage." },
           { question: "Can I finance this project?", answer: "Many contractors offer financing options, or you can explore home equity loans, personal loans, or credit cards with promotional APRs for larger projects." },
