@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
   <rect width="800" height="500" fill="#FAF7F2"/>
   <rect x="0" y="0" width="800" height="6" fill="#3F6E52" opacity="0.3"/>
@@ -12,7 +12,7 @@
   <text x="260" y="233" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#6B6459">Average-sized Interior Renovation project</text>
   <text x="240" y="280" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#6B6459">Your estimated cost</text>
   <rect x="240" y="290" width="320" height="50" rx="8" fill="#3F6E52" opacity="0.08"/>
-  <text x="400" y="322" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="22" font-weight="700" fill="#3F6E52">$100 &mdash; $800</text>
+  <text x="400" y="322" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="22" font-weight="700" fill="#3F6E52">$100 — $800</text>
   <text x="400" y="380" text-anchor="middle" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="11" fill="#6B6459">Adjust scope, size, and location for a precise estimate</text>
   <rect x="310" y="420" width="180" height="40" rx="20" fill="#3F6E52" opacity="0.12"/>
   <text x="400" y="446" text-anchor="middle" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#3F6E52">Use Free Calculator</text>

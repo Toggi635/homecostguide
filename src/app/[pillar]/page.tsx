@@ -5,6 +5,7 @@ import { SITE_URL } from "@/lib/site";
 import ArticleCard from "@/components/ArticleCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
+import ArticleImage from "@/components/ArticleImage";
 
 export function generateStaticParams() {
   return pillars.map((p) => ({ pillar: p.slug }));
@@ -19,6 +20,8 @@ export function generateMetadata({ params }: { params: { pillar: string } }) {
     alternates: { canonical: `/${pillar.slug}/` },
   };
 }
+
+const ASSET_PATH = process.env.NODE_ENV === "production" ? "/homecostguide" : "";
 
 export default function PillarPage({ params }: { params: { pillar: string } }) {
   const pillar = getPillar(params.pillar);
@@ -61,6 +64,17 @@ export default function PillarPage({ params }: { params: { pillar: string } }) {
       <JsonLd data={collectionPageSchema} />
 
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: pillar.name }]} />
+
+      <figure className="my-6 rounded-card overflow-hidden border border-line">
+        <ArticleImage
+          src={`${ASSET_PATH}/pillar-images/${pillar.slug}.svg`}
+          alt={`${pillar.name} cost guides overview`}
+          width={1200}
+          height={400}
+          className="w-full h-auto"
+          loading="eager"
+        />
+      </figure>
 
       <h1 className="text-3xl font-serif font-semibold text-ink mb-4">{pillar.name} Cost Guides</h1>
       <p className="text-muted mb-8 max-w-3xl">{pillar.description}</p>

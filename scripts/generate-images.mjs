@@ -175,7 +175,7 @@ function generateHero(a) {
   <text x="600" y="${titleY - (titleLines.length > 1 ? 20 : 0)}" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="${titleLines.length <= 2 ? 34 : 28}" font-weight="700" fill="${p.text}">${titleLines.map((l,i) => `<tspan x="600" dy="${i===0?0:36}">${escapeXml(l)}</tspan>`).join("")}</text>
   <text x="600" y="${titleY + 60 + (titleLines.length > 2 ? 10 : 0)}" text-anchor="middle" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="18" fill="${p.muted}">National Average Cost</text>
   <rect x="${600 - 140}" y="${titleY + 75 + (titleLines.length > 2 ? 10 : 0)}" width="280" height="50" rx="25" fill="${p.accent1}" opacity="0.12"/>
-  <text x="600" y="${titleY + 108 + (titleLines.length > 2 ? 10 : 0)}" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="22" font-weight="700" fill="${p.accent1}">${escapeXml(a.costLow)} &mdash; ${escapeXml(a.costHigh)}${escapeXml(a.costUnit)}</text>
+  <text x="600" y="${titleY + 108 + (titleLines.length > 2 ? 10 : 0)}" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="22" font-weight="700" fill="${p.accent1}">${escapeXml(a.costLow)} — ${escapeXml(a.costHigh)}${escapeXml(a.costUnit)}</text>
   <rect x="0" y="590" width="1200" height="40" fill="${p.accent1}" opacity="0.04"/>
   <text x="40" y="616" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="${p.muted}">${escapeXml(p.name)}</text>
   <text x="1140" y="616" text-anchor="end" font-family="Georgia,'Times New Roman',serif" font-size="15" font-weight="600" fill="${p.accent1}">HomeCostGuide</text>
@@ -241,7 +241,7 @@ function generateFormatVisual(a) {
   <text x="260" y="233" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="${p.muted}">Average-sized ${escapeXml(p.name)} project</text>
   <text x="240" y="280" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="${p.muted}">Your estimated cost</text>
   <rect x="240" y="290" width="320" height="50" rx="8" fill="${p.accent1}" opacity="0.08"/>
-  <text x="400" y="322" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="22" font-weight="700" fill="${p.accent1}">${escapeXml(a.costLow)} &mdash; ${escapeXml(a.costHigh)}</text>
+  <text x="400" y="322" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="22" font-weight="700" fill="${p.accent1}">${escapeXml(a.costLow)} — ${escapeXml(a.costHigh)}</text>
   <text x="400" y="380" text-anchor="middle" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="11" fill="${p.muted}">Adjust scope, size, and location for a precise estimate</text>
   <rect x="310" y="420" width="180" height="40" rx="20" fill="${p.accent1}" opacity="0.12"/>
   <text x="400" y="446" text-anchor="middle" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="${p.accent1}">Use Free Calculator</text>
@@ -350,7 +350,7 @@ function generateFormatVisual(a) {
     <circle cx="50" cy="190" r="24" fill="${p.accent1}" opacity="0.1"/>
     <text x="50" y="196" text-anchor="middle" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="${p.accent1}">3</text>
     <text x="90" y="196" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="15" font-weight="600" fill="${p.text}">Plan your budget</text>
-    <text x="90" y="216" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="12" fill="${p.muted}">Budget range: ${escapeXml(a.costLow)} &mdash; ${escapeXml(a.costHigh)}</text>
+    <text x="90" y="216" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="12" fill="${p.muted}">Budget range: ${escapeXml(a.costLow)} — ${escapeXml(a.costHigh)}</text>
   </g>
   <text x="400" y="420" text-anchor="middle" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="11" fill="${p.muted}">Source: ${escapeXml(a.costSource)}</text>
 </svg>`;

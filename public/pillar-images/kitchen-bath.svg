@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#B5651D" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FAF7F2" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="400" fill="#FAF7F2"/>
+  <rect width="1200" height="400" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#B5651D"/>
+  <circle cx="950" cy="80" r="250" fill="#B5651D" opacity="0.04"/>
+  <circle cx="100" cy="350" r="200" fill="#B5651D" opacity="0.03"/>
+  <text x="80" y="160" font-family="Georgia,'Times New Roman',serif" font-size="38" font-weight="700" fill="#1C2B24">Kitchen & Bath</text>
+  <text x="80" y="210" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="18" fill="#6B6459">Real cost data, sourced pricing, and expert guides</text>
+  <text x="80" y="240" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="14" fill="#6B6459">Compare prices before you hire a contractor</text>
+  <rect x="80" y="275" width="180" height="40" rx="20" fill="#B5651D" opacity="0.1"/>
+  <text x="170" y="301" text-anchor="middle" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#B5651D">Browse 7 guides</text>
+  <text x="1140" y="380" text-anchor="end" font-family="Georgia,'Times New Roman',serif" font-size="14" font-weight="600" fill="#B5651D">HomeCostGuide</text>
+  <rect x="250" y="80" width="850" height="270" rx="16" fill="#B5651D" opacity="0.03"/>
+</svg>
