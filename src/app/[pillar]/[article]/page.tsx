@@ -58,6 +58,8 @@ const mdxComponents = {
   HouseholdBillTable,
 };
 
+const ASSET_PATH = process.env.NODE_ENV === "production" ? "/homecostguide" : "";
+
 export default async function ArticlePage({ params }: { params: { pillar: string; article: string } }) {
   const article = getArticle(params.article);
   if (!article) notFound();
@@ -140,6 +142,18 @@ export default async function ArticlePage({ params }: { params: { pillar: string
         high={article.costHigh}
       />
 
+      <figure className="my-6 rounded-card overflow-hidden border border-line">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={`${ASSET_PATH}/article-images/${article.slug}/hero.svg`}
+          alt={`${article.title} - National average cost range illustration`}
+          width={1200}
+          height={630}
+          className="w-full h-auto"
+          loading="eager"
+        />
+      </figure>
+
       <AdSlot placement="after-intro" />
 
       <TableOfContents />
@@ -151,6 +165,18 @@ export default async function ArticlePage({ params }: { params: { pillar: string
           <p className="text-muted italic">Content coming soon.</p>
         )}
       </article>
+
+      <figure className="my-8 rounded-card overflow-hidden border border-line">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={`${ASSET_PATH}/article-images/${article.slug}/cost.svg`}
+          alt={`Cost range visualization for ${article.targetKeyword}: ${article.costLow} to ${article.costHigh}`}
+          width={800}
+          height={500}
+          className="w-full h-auto"
+          loading="lazy"
+        />
+      </figure>
 
       {article.format === "calculator" && (
         <ScopeCostCalculator
@@ -172,6 +198,18 @@ export default async function ArticlePage({ params }: { params: { pillar: string
       <AdSlot placement="mid-content" />
 
       <AdSlot placement="pre-faq" />
+
+      <figure className="my-8 rounded-card overflow-hidden border border-line">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={`${ASSET_PATH}/article-images/${article.slug}/format.svg`}
+          alt={`${article.targetKeyword} cost guide overview`}
+          width={800}
+          height={500}
+          className="w-full h-auto"
+          loading="lazy"
+        />
+      </figure>
 
       <FAQAccordion
         title="Frequently Asked Questions"

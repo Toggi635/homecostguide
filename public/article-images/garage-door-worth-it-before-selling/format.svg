@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FAF7F2"/>
+  <rect x="0" y="0" width="800" height="6" fill="#6B6459" opacity="0.3"/>
+  <text x="400" y="50" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="22" font-weight="700" fill="#1C2B24">Complete Guide: is it worth replacing garage door before selling</text>
+  <text x="400" y="78" text-anchor="middle" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="14" fill="#6B6459">Step-by-step pricing breakdown for informed decisions</text>
+  <g transform="translate(100, 120)">
+    <circle cx="50" cy="30" r="24" fill="#6B6459" opacity="0.1"/>
+    <text x="50" y="36" text-anchor="middle" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#6B6459">1</text>
+    <text x="90" y="36" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="15" font-weight="600" fill="#1C2B24">Evaluate your project scope</text>
+    <text x="90" y="56" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="12" fill="#6B6459">Assess size, materials, and complexity</text>
+    <line x1="50" y1="54" x2="50" y2="100" stroke="#E7E2D9" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <circle cx="50" cy="110" r="24" fill="#6B6459" opacity="0.1"/>
+    <text x="50" y="116" text-anchor="middle" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#6B6459">2</text>
+    <text x="90" y="116" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="15" font-weight="600" fill="#1C2B24">Compare material & labor costs</text>
+    <text x="90" y="136" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="12" fill="#6B6459">Get quotes from multiple contractors</text>
+    <line x1="50" y1="134" x2="50" y2="180" stroke="#E7E2D9" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <circle cx="50" cy="190" r="24" fill="#6B6459" opacity="0.1"/>
+    <text x="50" y="196" text-anchor="middle" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#6B6459">3</text>
+    <text x="90" y="196" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="15" font-weight="600" fill="#1C2B24">Plan your budget</text>
+    <text x="90" y="216" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="12" fill="#6B6459">Budget range: $800 &mdash; $3,000</text>
+  </g>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="11" fill="#6B6459">Source: Remodeling Magazine 2025</text>
+</svg>
