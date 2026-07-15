@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 interface FAQItem {
   question: string;
@@ -17,19 +18,19 @@ export default function FAQAccordion({ items, title }: FAQAccordionProps) {
 
   return (
     <div className="my-6">
-      {title && <h3 className="text-lg font-semibold mb-4">{title}</h3>}
+      {title && <h3 className="text-lg font-serif font-semibold mb-4">{title}</h3>}
       <div className="space-y-2">
         {items.map((item, i) => (
-          <div key={i} className="border border-gray-200 rounded-lg overflow-hidden">
+          <div key={i} className="border border-line rounded-card overflow-hidden">
             <button
-              className="w-full text-left px-4 py-3 bg-gray-50 hover:bg-gray-100 font-medium text-sm flex justify-between items-center"
+              className="w-full text-left px-4 py-3 bg-paper hover:bg-line/50 font-medium text-sm flex justify-between items-center transition-colors"
               onClick={() => setOpenIndex(openIndex === i ? null : i)}
             >
-              {item.question}
-              <span className={`transform transition-transform ${openIndex === i ? "rotate-180" : ""}`}>▼</span>
+              <span className="text-ink">{item.question}</span>
+              <ChevronDown size={16} className={`text-muted transition-transform duration-200 ${openIndex === i ? "rotate-180" : ""}`} />
             </button>
             {openIndex === i && (
-              <div className="px-4 py-3 text-sm text-gray-600">
+              <div className="px-4 py-3 text-sm text-muted border-t border-line">
                 {item.answer}
               </div>
             )}

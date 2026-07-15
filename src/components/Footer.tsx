@@ -1,14 +1,20 @@
 import Link from "next/link";
 import { pillars } from "@/lib/content";
+import { Home } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 mt-16">
+    <footer className="bg-ink text-muted mt-16">
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">HomeCostGuide</h3>
-            <p className="text-sm text-gray-400">
+            <Link href="/" className="flex items-center gap-2 font-serif font-semibold text-white text-lg mb-4">
+              <span className="bg-rust text-white rounded-lg p-1.5">
+                <Home size={16} />
+              </span>
+              HomeCostGuide
+            </Link>
+            <p className="text-sm text-muted">
               Real home improvement costs, pricing guides, and calculators to help you budget with confidence.
             </p>
           </div>
@@ -42,7 +48,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500">
+        <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm text-muted">
           <p>&copy; {new Date().getFullYear()} HomeCostGuide. All rights reserved.</p>
         </div>
       </div>

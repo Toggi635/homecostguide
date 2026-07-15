@@ -17,12 +17,12 @@ export default function HouseholdBillTable({ title, utilityType, data }: Househo
   const billsForDwelling = data[dwelling] ?? {};
 
   return (
-    <div className="bg-white border border-gray-200 rounded-lg p-6 my-6 shadow-sm">
-      {title && <h3 className="text-lg font-semibold mb-4">{title}</h3>}
+    <div className="bg-white border border-line rounded-card p-6 my-6 shadow-soft">
+      {title && <h3 className="text-lg font-serif font-semibold text-ink mb-4">{title}</h3>}
       <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700 mb-1">Dwelling Type</label>
+        <label className="block text-sm font-medium text-ink mb-1">Dwelling Type</label>
         <select
-          className="border border-gray-300 rounded-md px-3 py-2 text-sm"
+          className="border border-line rounded-btn px-3 py-2 text-sm bg-white text-ink focus:ring-2 focus:ring-rust/40 focus:border-rust outline-none"
           value={dwelling}
           onChange={(e) => setDwelling(e.target.value)}
         >
@@ -32,24 +32,24 @@ export default function HouseholdBillTable({ title, utilityType, data }: Househo
         </select>
       </div>
       <div className="overflow-x-auto">
-        <table className="w-full border-collapse border border-gray-200 text-sm">
+        <table className="w-full border-collapse border border-line text-sm">
           <thead>
-            <tr className="bg-gray-100">
-              <th className="border border-gray-200 px-4 py-2 text-left">Household Size</th>
-              <th className="border border-gray-200 px-4 py-2 text-left">Low ({unit})</th>
-              <th className="border border-gray-200 px-4 py-2 text-left">Average ({unit})</th>
-              <th className="border border-gray-200 px-4 py-2 text-left">High ({unit})</th>
-              <th className="border border-gray-200 px-4 py-2 text-left">Est. Monthly Cost</th>
+            <tr className="bg-paper">
+              <th className="border border-line px-4 py-2 text-left text-ink font-medium">Household Size</th>
+              <th className="border border-line px-4 py-2 text-left text-ink font-medium">Low ({unit})</th>
+              <th className="border border-line px-4 py-2 text-left text-ink font-medium">Average ({unit})</th>
+              <th className="border border-line px-4 py-2 text-left text-ink font-medium">High ({unit})</th>
+              <th className="border border-line px-4 py-2 text-left text-ink font-medium">Est. Monthly Cost</th>
             </tr>
           </thead>
           <tbody>
             {Object.entries(billsForDwelling).map(([size, vals], i) => (
-              <tr key={size} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                <td className="border border-gray-200 px-4 py-2 font-medium">{size} {size === "1" ? "person" : "people"}</td>
-                <td className="border border-gray-200 px-4 py-2">{vals.low.toLocaleString()}</td>
-                <td className="border border-gray-200 px-4 py-2">{vals.average.toLocaleString()}</td>
-                <td className="border border-gray-200 px-4 py-2">{vals.high.toLocaleString()}</td>
-                <td className="border border-gray-200 px-4 py-2 font-medium">${Math.round(vals.average * 0.12).toLocaleString()}</td>
+              <tr key={size} className={i % 2 === 0 ? "bg-white" : "bg-paper"}>
+                <td className="border border-line px-4 py-2 font-medium text-ink">{size} {size === "1" ? "person" : "people"}</td>
+                <td className="border border-line px-4 py-2 text-ink/80">{vals.low.toLocaleString()}</td>
+                <td className="border border-line px-4 py-2 text-ink/80">{vals.average.toLocaleString()}</td>
+                <td className="border border-line px-4 py-2 text-ink/80">{vals.high.toLocaleString()}</td>
+                <td className="border border-line px-4 py-2 font-medium text-rust">${Math.round(vals.average * 0.12).toLocaleString()}</td>
               </tr>
             ))}
           </tbody>

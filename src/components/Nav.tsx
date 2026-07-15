@@ -3,59 +3,57 @@
 import Link from "next/link";
 import { useState } from "react";
 import { pillars } from "@/lib/content";
+import { Home, Calculator, Menu, X } from "lucide-react";
 
 export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="border-b border-gray-200 bg-white">
+    <header className="sticky top-0 z-50 bg-paper/95 backdrop-blur-sm border-b border-line">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-xl font-bold text-blue-600">
+          <Link href="/" className="flex items-center gap-2 font-serif font-semibold text-ink text-lg">
+            <span className="bg-rust text-white rounded-lg p-1.5">
+              <Home size={18} />
+            </span>
             HomeCostGuide
           </Link>
           <button
-            className="md:hidden p-2 text-gray-500"
+            className="md:hidden p-2 text-muted hover:text-rust transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle navigation"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {mobileOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
           <nav className="hidden md:flex items-center gap-1">
-            <Link href="/" className="px-3 py-2 text-sm text-gray-600 hover:text-blue-600 rounded-md hover:bg-gray-50">
+            <Link href="/" className="px-3 py-2 text-sm font-medium text-ink/70 hover:text-rust transition-colors">
               Home
             </Link>
             {pillars.map((p) => (
               <Link
                 key={p.slug}
                 href={`/${p.slug}/`}
-                className="px-3 py-2 text-sm text-gray-600 hover:text-blue-600 rounded-md hover:bg-gray-50 whitespace-nowrap"
+                className="px-3 py-2 text-sm font-medium text-ink/70 hover:text-rust transition-colors whitespace-nowrap"
               >
                 {p.name}
               </Link>
             ))}
-            <Link href="/calculators/" className="px-3 py-2 text-sm text-gray-600 hover:text-blue-600 rounded-md hover:bg-gray-50">
-              Calculators
+            <Link href="/calculators/" className="px-3 py-2 text-sm font-medium text-ink/70 hover:text-rust transition-colors">
+              <span className="inline-flex items-center gap-1"><Calculator size={14} />Calculators</span>
             </Link>
-            <Link href="/about/" className="px-3 py-2 text-sm text-gray-600 hover:text-blue-600 rounded-md hover:bg-gray-50">
+            <Link href="/about/" className="px-3 py-2 text-sm font-medium text-ink/70 hover:text-rust transition-colors">
               About
             </Link>
           </nav>
         </div>
         {mobileOpen && (
-          <nav className="md:hidden pb-4 border-t border-gray-100 pt-2">
-            <Link href="/" className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setMobileOpen(false)}>Home</Link>
+          <nav className="md:hidden pb-4 border-t border-line pt-2">
+            <Link href="/" className="block px-3 py-2 text-sm text-ink/70 hover:text-rust transition-colors" onClick={() => setMobileOpen(false)}>Home</Link>
             {pillars.map((p) => (
-              <Link key={p.slug} href={`/${p.slug}/`} className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setMobileOpen(false)}>{p.name}</Link>
+              <Link key={p.slug} href={`/${p.slug}/`} className="block px-3 py-2 text-sm text-ink/70 hover:text-rust transition-colors" onClick={() => setMobileOpen(false)}>{p.name}</Link>
             ))}
-            <Link href="/calculators/" className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setMobileOpen(false)}>Calculators</Link>
-            <Link href="/about/" className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setMobileOpen(false)}>About</Link>
+            <Link href="/calculators/" className="block px-3 py-2 text-sm text-ink/70 hover:text-rust transition-colors" onClick={() => setMobileOpen(false)}>Calculators</Link>
+            <Link href="/about/" className="block px-3 py-2 text-sm text-ink/70 hover:text-rust transition-colors" onClick={() => setMobileOpen(false)}>About</Link>
           </nav>
         )}
       </div>

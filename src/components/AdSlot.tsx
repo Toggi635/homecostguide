@@ -14,7 +14,7 @@ export default function AdSlot({ placement }: AdSlotProps) {
   const isRealAdsenseId = adsenseId && adsenseId !== "ca-pub-0000000000000000";
 
   return (
-    <div className="bg-gray-100 border border-gray-200 rounded-lg p-4 my-6 text-center text-sm text-gray-400 min-h-[90px] flex items-center justify-center">
+    <div className="bg-paper border border-line rounded-card p-4 my-6 text-center text-sm text-muted min-h-[90px] flex items-center justify-center">
       {isRealAdsenseId ? (
         <div data-ad-slot={placement} className="ad-container" />
       ) : (

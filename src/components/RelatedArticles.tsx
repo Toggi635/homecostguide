@@ -12,16 +12,16 @@ export default function RelatedArticles({ currentArticle }: RelatedArticlesProps
 
   return (
     <div className="my-8">
-      <h3 className="text-lg font-semibold mb-4">Related Articles</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <h3 className="text-lg font-serif font-semibold text-ink mb-4">Related Articles</h3>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {related.map((article) => (
           <Link
             key={article.id}
             href={`/${article.pillar}/${article.slug}/`}
-            className="block border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-sm transition-all"
+            className="block bg-white border border-line rounded-card p-4 shadow-soft transition-all duration-200 hover:shadow-lift hover:-translate-y-0.5 hover:border-rust/40"
           >
-            <p className="text-xs text-gray-400 mb-1">{pillar?.name}</p>
-            <p className="text-sm font-medium">{article.title}</p>
+            <p className="text-xs text-muted mb-1">{pillar?.name}</p>
+            <p className="text-sm font-medium text-ink">{article.title}</p>
           </Link>
         ))}
       </div>

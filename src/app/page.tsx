@@ -1,12 +1,24 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import PillarCard from "@/components/PillarCard";
 import ArticleCard from "@/components/ArticleCard";
+import Button from "@/components/Button";
 import JsonLd from "@/components/JsonLd";
 import { pillars, getArticlesByTier } from "@/lib/content";
 import { SITE_URL } from "@/lib/site";
+import { Search, BadgeCheck, RefreshCw, FileText, Calculator } from "lucide-react";
 
 export default function HomePage() {
   const topArticles = getArticlesByTier("A");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredArticles = searchQuery
+    ? topArticles.filter((a) =>
+        a.title.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : topArticles;
 
   const websiteSchema = {
     "@context": "https://schema.org",
@@ -26,49 +38,79 @@ export default function HomePage() {
     })),
   };
 
+  const recentArticles = topArticles.slice(0, 4);
+
   return (
     <div className="max-w-6xl mx-auto px-4">
       <JsonLd data={websiteSchema} />
       <JsonLd data={itemListSchema} />
 
-      <section className="py-16 text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Know What Home Projects Really Cost
-        </h1>
-        <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-8">
-          Transparent, researched pricing guides for roofing, HVAC, plumbing, electrical, remodeling, and home maintenance. No guesswork.
-        </p>
-        <div className="relative max-w-md mx-auto">
-          <input
-            type="text"
-            placeholder="e.g., cost to replace a roof..."
-            className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-400"
-            readOnly
-          />
-          <div className="absolute inset-y-0 right-0 flex items-center pr-3">
-            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
+      <section className="py-12 lg:py-16 lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+        <div className="motion-safe:animate-fade-up mb-8 lg:mb-0">
+          <h1 className="font-serif text-4xl md:text-5xl font-semibold text-ink leading-tight mb-4">
+            Know What Home Projects Really Cost
+          </h1>
+          <p className="text-lg text-muted mb-6">
+            Transparent, researched pricing guides for roofing, HVAC, plumbing, electrical, remodeling, and home maintenance. No guesswork.
+          </p>
+          <div className="relative max-w-md mb-6">
+            <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted" />
+            <input
+              type="text"
+              placeholder="e.g., cost to replace a roof..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full rounded-btn border border-line bg-white pl-10 pr-4 py-3 text-sm shadow-soft focus:ring-2 focus:ring-rust/40 focus:border-rust outline-none transition-shadow"
+            />
+          </div>
+          <Button href="/calculators/" variant="primary">
+            <Calculator size={16} />
+            Browse Cost Calculators
+          </Button>
+        </div>
+        <div className="rounded-card bg-gradient-to-br from-forest/10 to-rust/10 p-6 shadow-soft">
+          <h3 className="font-serif font-semibold text-ink text-sm mb-4">Recently Updated Cost Guides</h3>
+          <div className="space-y-3">
+            {recentArticles.map((a) => {
+              const pillarObj = pillars.find((p) => p.slug === a.pillar);
+              const dotColor = pillarObj
+                ? ["roofing-exterior", "plumbing", "kitchen-bath", "home-maintenance"].includes(pillarObj.slug)
+                  ? "bg-rust"
+                  : "bg-forest"
+                : "bg-rust";
+              return (
+                <Link key={a.id} href={`/${a.pillar}/${a.slug}/`} className="flex items-center gap-3 group">
+                  <span className={`w-2 h-2 rounded-full shrink-0 ${dotColor}`} />
+                  <span className="text-sm text-ink/80 group-hover:text-rust transition-colors flex-1 truncate">{a.title}</span>
+                  <span className="text-xs font-medium text-rust shrink-0">{a.costLow}–{a.costHigh}</span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
 
       <section className="mb-12">
-        <div className="bg-blue-600 text-white rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold mb-2">Home Maintenance Cost Calculator</h2>
-          <p className="text-blue-100 mb-4">Plan your annual home maintenance budget with our flagship calculator.</p>
-          <Link
-            href="/home-maintenance/annual-home-maintenance-cost-calculator/"
-            className="inline-block bg-white text-blue-700 font-medium px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
-          >
+        <div className="bg-white border border-line rounded-card p-8 shadow-soft">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-forest/10 text-forest">
+              <Calculator size={22} />
+            </span>
+            <div>
+              <h2 className="text-xl font-serif font-semibold text-ink">Home Maintenance Cost Calculator</h2>
+              <p className="text-sm text-muted">Plan your annual home maintenance budget</p>
+            </div>
+          </div>
+          <p className="text-muted text-sm mb-4">Our flagship calculator helps you estimate how much to set aside each year for home maintenance based on your home&apos;s age, size, and location.</p>
+          <Button href="/home-maintenance/annual-home-maintenance-cost-calculator/" variant="secondary">
             Try the Calculator
-          </Link>
+          </Button>
         </div>
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-6">Browse by Category</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <h2 className="text-2xl font-serif font-semibold text-ink mb-6">Browse by Category</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {pillars.map((p) => (
             <PillarCard key={p.slug} slug={p.slug} name={p.name} description={p.description} />
           ))}
@@ -76,22 +118,48 @@ export default function HomePage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-6">Most Searched Cost Guides</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {topArticles.map((a) => (
-            <ArticleCard key={a.id} article={a} />
-          ))}
+        <h2 className="text-2xl font-serif font-semibold text-ink mb-6">Most Searched Cost Guides</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {filteredArticles.length > 0 ? (
+            filteredArticles.map((a) => (
+              <ArticleCard key={a.id} article={a} />
+            ))
+          ) : (
+            <p className="text-muted text-sm col-span-full">No guides match your search.</p>
+          )}
         </div>
       </section>
 
-      <section className="mb-12 bg-gray-50 rounded-lg p-6 text-center">
-        <h2 className="text-lg font-semibold mb-2">How We Calculate Costs</h2>
-        <p className="text-sm text-gray-500 mb-4">
-          Our cost data comes from industry databases, contractor surveys, and published averages from trusted home-service aggregators. We update our guides annually.
-        </p>
-        <Link href="/methodology/" className="text-sm text-blue-600 hover:underline">
-          Read our full methodology →
-        </Link>
+      <section className="mb-12 bg-white border border-line rounded-card p-8 shadow-soft">
+        <h2 className="text-lg font-serif font-semibold text-ink mb-6">How We Calculate Costs</h2>
+        <div className="flex flex-col md:flex-row gap-6">
+          <div className="flex items-start gap-3 flex-1">
+            <BadgeCheck size={20} className="text-forest shrink-0 mt-0.5" />
+            <div>
+              <h3 className="font-medium text-sm text-ink mb-1">Sourced Data</h3>
+              <p className="text-sm text-muted">Costs come from industry databases, contractor surveys, and published averages from trusted home-service aggregators.</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-3 flex-1">
+            <RefreshCw size={20} className="text-rust shrink-0 mt-0.5" />
+            <div>
+              <h3 className="font-medium text-sm text-ink mb-1">Always Updated</h3>
+              <p className="text-sm text-muted">We review and refresh our pricing guides annually to reflect current market rates.</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-3 flex-1">
+            <FileText size={20} className="text-forest shrink-0 mt-0.5" />
+            <div>
+              <h3 className="font-medium text-sm text-ink mb-1">Transparent Methodology</h3>
+              <p className="text-sm text-muted">Every cost range explains what&apos;s included, what affects pricing, and how we arrived at the numbers.</p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-6 text-center">
+          <Button href="/methodology/" variant="ghost">
+            Read our full methodology
+          </Button>
+        </div>
       </section>
     </div>
   );

@@ -37,14 +37,14 @@ export default function TableOfContents() {
   if (items.length === 0) return null;
 
   return (
-    <nav className="bg-gray-50 border border-gray-200 rounded-lg p-4 my-6">
-      <p className="font-medium text-sm mb-2">On This Page</p>
+    <nav className="bg-paper border border-line rounded-card p-4 my-6">
+      <p className="font-medium text-sm text-ink mb-2">On This Page</p>
       <ul className="space-y-1">
         {items.map((item) => (
           <li key={item.id} style={{ paddingLeft: `${(item.level - 2) * 12}px` }}>
             <a
               href={`#${item.id}`}
-              className={`text-sm hover:text-blue-600 transition-colors ${activeId === item.id ? "text-blue-600 font-medium" : "text-gray-600"}`}
+              className={`text-sm hover:text-rust transition-colors ${activeId === item.id ? "text-rust font-medium" : "text-muted"}`}
             >
               {item.text}
             </a>

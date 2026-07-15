@@ -52,29 +52,29 @@ export default function PillarPage({ params }: { params: { pillar: string } }) {
 
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: pillar.name }]} />
 
-      <h1 className="text-3xl font-bold mb-4">{pillar.name} Cost Guides</h1>
-      <p className="text-gray-500 mb-8 max-w-3xl">{pillar.description}</p>
+      <h1 className="text-3xl font-serif font-semibold text-ink mb-4">{pillar.name} Cost Guides</h1>
+      <p className="text-muted mb-8 max-w-3xl">{pillar.description}</p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
         {pillarArticles.map((a) => (
           <ArticleCard key={a.id} article={a} />
         ))}
       </div>
 
       {pillarArticles.length === 0 && (
-        <p className="text-gray-400 text-center py-12">No guides yet in this category. Check back soon.</p>
+        <p className="text-muted text-center py-12">No guides yet in this category. Check back soon.</p>
       )}
 
       {relatedPillars.length > 0 && (
-        <section className="border-t border-gray-200 pt-8">
-          <h2 className="text-xl font-semibold mb-4">Related Categories</h2>
+        <section className="border-t border-line pt-8">
+          <h2 className="text-xl font-serif font-semibold text-ink mb-4">Related Categories</h2>
           <div className="flex flex-wrap gap-3">
             {relatedPillars.map((rp) =>
               rp ? (
                 <Link
                   key={rp.slug}
                   href={`/${rp.slug}/`}
-                  className="text-blue-600 hover:underline text-sm"
+                  className="text-rust hover:text-rust-dark underline text-sm"
                 >
                   {rp.name}
                 </Link>
@@ -84,9 +84,9 @@ export default function PillarPage({ params }: { params: { pillar: string } }) {
         </section>
       )}
 
-      <section className="border-t border-gray-200 mt-8 pt-8">
-        <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
-        <p className="text-sm text-gray-500">
+      <section className="border-t border-line mt-8 pt-8">
+        <h2 className="text-xl font-serif font-semibold text-ink mb-4">Frequently Asked Questions</h2>
+        <p className="text-sm text-muted">
           Browse individual guides above for detailed FAQs about specific projects and their costs.
         </p>
       </section>

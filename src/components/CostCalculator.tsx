@@ -33,17 +33,17 @@ export default function CostCalculator({ title, fields, formula, baseUnit }: Cos
   };
 
   return (
-    <div className="bg-white border border-gray-200 rounded-lg p-6 my-6 shadow-sm">
-      {title && <h3 className="text-lg font-semibold mb-4">{title}</h3>}
+    <div className="bg-white border border-line rounded-card p-6 my-6 shadow-soft">
+      {title && <h3 className="text-lg font-serif font-semibold text-ink mb-4">{title}</h3>}
       <div className="space-y-4">
         {fields.map((field) => (
           <div key={field.key}>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-ink mb-1">
               {field.label}: {field.options ? field.options.find((o) => o.value === values[field.key])?.label : `${values[field.key]}${field.unit ?? ""}`}
             </label>
             {field.type === "dropdown" && field.options ? (
               <select
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
+                className="w-full border border-line rounded-btn px-3 py-2 text-sm bg-white text-ink focus:ring-2 focus:ring-rust/40 focus:border-rust outline-none"
                 value={values[field.key]}
                 onChange={(e) => update(field.key, Number(e.target.value))}
               >
@@ -59,29 +59,29 @@ export default function CostCalculator({ title, fields, formula, baseUnit }: Cos
                 step={field.step ?? 1}
                 value={values[field.key]}
                 onChange={(e) => update(field.key, Number(e.target.value))}
-                className="w-full"
+                className="w-full accent-rust"
               />
             )}
           </div>
         ))}
       </div>
-      <div className="mt-6 pt-4 border-t border-gray-200">
-        <p className="text-sm text-gray-500 mb-2">Estimated Cost Range</p>
+      <div className="mt-6 pt-4 border-t border-line">
+        <p className="text-sm text-muted mb-2">Estimated Cost Range</p>
         <div className="grid grid-cols-3 gap-4">
           <div className="text-center">
-            <p className="text-xs text-gray-400">Low</p>
-            <p className="text-xl font-bold text-green-600">${result.low.toLocaleString()}</p>
+            <p className="text-xs text-muted">Low</p>
+            <p className="text-xl font-bold font-serif text-forest">${result.low.toLocaleString()}</p>
           </div>
           <div className="text-center">
-            <p className="text-xs text-gray-400">Average</p>
-            <p className="text-xl font-bold text-blue-600">${result.average.toLocaleString()}</p>
+            <p className="text-xs text-muted">Average</p>
+            <p className="text-xl font-bold font-serif text-rust">${result.average.toLocaleString()}</p>
           </div>
           <div className="text-center">
-            <p className="text-xs text-gray-400">High</p>
-            <p className="text-xl font-bold text-red-600">${result.high.toLocaleString()}</p>
+            <p className="text-xs text-muted">High</p>
+            <p className="text-xl font-bold font-serif text-ink">${result.high.toLocaleString()}</p>
           </div>
         </div>
-        {baseUnit && <p className="text-xs text-gray-400 text-center mt-2">{baseUnit}</p>}
+        {baseUnit && <p className="text-xs text-muted text-center mt-2">{baseUnit}</p>}
       </div>
     </div>
   );

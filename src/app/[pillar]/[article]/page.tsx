@@ -15,6 +15,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import FindAProCTA from "@/components/FindAProCTA";
 import AdSlot from "@/components/AdSlot";
 import JsonLd from "@/components/JsonLd";
+import Button from "@/components/Button";
 import fs from "fs";
 import path from "path";
 
@@ -112,8 +113,8 @@ export default async function ArticlePage({ params }: { params: { pillar: string
         { label: article.title },
       ]} />
 
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">{article.title}</h1>
-      <p className="text-sm text-gray-400 mb-4">Last updated: January 15, 2026</p>
+      <h1 className="text-3xl md:text-4xl font-serif font-semibold text-ink leading-tight mb-2">{article.title}</h1>
+      <p className="text-sm text-muted mb-4">Last updated: January 15, 2026</p>
 
       <AuthorBio />
 
@@ -128,25 +129,25 @@ export default async function ArticlePage({ params }: { params: { pillar: string
 
       <TableOfContents />
 
-      <article className="prose prose-gray max-w-none">
+      <article className="prose prose-article max-w-none text-ink/90">
         {mdxSource ? (
           <MDXRemote source={mdxSource} components={mdxComponents} />
         ) : (
-          <p className="text-gray-400 italic">Content coming soon.</p>
+          <p className="text-muted italic">Content coming soon.</p>
         )}
       </article>
 
       {article.format !== "guide" && article.format !== "data-table" && (
-        <div className="my-8">
-          <h2 id="calculator" className="text-xl font-semibold mb-4">
+        <div className="my-8 bg-paper border border-line rounded-card p-6 shadow-soft">
+          <h2 id="calculator" className="text-xl font-serif font-semibold text-ink mb-4">
             {article.format === "calculator" ? "Cost Calculator" :
              article.format === "decision-table" ? "Repair vs Replace Tool" :
              article.format === "comparison-table" ? "Comparison Tool" : "Interactive Tool"}
           </h2>
-          <p className="text-sm text-gray-500 mb-4">
+          <p className="text-sm text-muted mb-4">
             Use the interactive tool below to estimate your specific project cost.
           </p>
-          <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center text-gray-400">
+          <div className="border-2 border-dashed border-line rounded-card p-8 text-center text-muted">
             [{article.format === "calculator" ? "Interactive Cost Calculator" :
               article.format === "decision-table" ? "Repair vs Replace Decision Tool" :
               article.format === "comparison-table" ? "Comparison Table" :
@@ -177,9 +178,9 @@ export default async function ArticlePage({ params }: { params: { pillar: string
       <RelatedArticles currentArticle={article} />
 
       <div className="mt-6 text-center">
-        <a href="/methodology/" className="text-sm text-blue-600 hover:underline">
-          How we calculate costs →
-        </a>
+        <Button href="/methodology/" variant="ghost">
+          How we calculate costs
+        </Button>
       </div>
     </div>
   );
