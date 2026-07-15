@@ -3,6 +3,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { articles, getPillar, getArticle } from "@/lib/content";
 import { SITE_URL } from "@/lib/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import ArticleImage from "@/components/ArticleImage";
 import AuthorBio from "@/components/AuthorBio";
 import CostRangeBox from "@/components/CostRangeBox";
 import CostCalculator from "@/components/CostCalculator";
@@ -143,8 +144,7 @@ export default async function ArticlePage({ params }: { params: { pillar: string
       />
 
       <figure className="my-6 rounded-card overflow-hidden border border-line">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <ArticleImage
           src={`${ASSET_PATH}/article-images/${article.slug}/hero.svg`}
           alt={`${article.title} - National average cost range illustration`}
           width={1200}
@@ -167,8 +167,7 @@ export default async function ArticlePage({ params }: { params: { pillar: string
       </article>
 
       <figure className="my-8 rounded-card overflow-hidden border border-line">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <ArticleImage
           src={`${ASSET_PATH}/article-images/${article.slug}/cost.svg`}
           alt={`Cost range visualization for ${article.targetKeyword}: ${article.costLow} to ${article.costHigh}`}
           width={800}
@@ -200,8 +199,7 @@ export default async function ArticlePage({ params }: { params: { pillar: string
       <AdSlot placement="pre-faq" />
 
       <figure className="my-8 rounded-card overflow-hidden border border-line">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <ArticleImage
           src={`${ASSET_PATH}/article-images/${article.slug}/format.svg`}
           alt={`${article.targetKeyword} cost guide overview`}
           width={800}
