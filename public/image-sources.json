@@ -9,43 +9,43 @@
       "photographer": "Bernd Dittrich"
     },
     "cost-to-replace-windows": {
+      "source": "https://unsplash.com/photos/1472342139520-1aa49517fed8",
+      "photographer": "davide ragusa"
+    },
+    "cost-to-install-a-fence": {
       "source": "https://unsplash.com/photos/1753717202565-ee088d9871fc",
       "photographer": "Unsplash"
     },
-    "cost-to-install-a-fence": {
+    "gutter-installation-cost": {
       "source": "https://unsplash.com/photos/1722881445875-bdd5f4d9e6fa",
       "photographer": "Unsplash"
     },
-    "gutter-installation-cost": {
-      "source": "https://unsplash.com/photos/1763665814605-a6489a3bf2a0",
-      "photographer": "Sergej Karpow"
-    },
     "metal-roof-vs-asphalt-shingle": {
-      "source": "https://unsplash.com/photos/1472342139520-1aa49517fed8",
-      "photographer": "davide ragusa"
+      "source": "https://unsplash.com/photos/1772852340517-b11ec88979fc",
+      "photographer": "Brian J. Tromp"
     },
     "cost-to-build-a-deck": {
       "source": "https://unsplash.com/photos/1687266152952-540777e6e8c8",
       "photographer": "Unsplash"
     },
     "cost-to-replace-a-driveway": {
-      "source": "https://unsplash.com/photos/1772852340517-b11ec88979fc",
-      "photographer": "Brian J. Tromp"
+      "source": "https://unsplash.com/photos/1667830502449-d5a2039204d6",
+      "photographer": "Unsplash"
     },
     "hvac-repair-vs-replace": {
-      "source": "https://unsplash.com/photos/1757219525975-03b5984bc6e8",
+      "source": "https://unsplash.com/photos/1704307023984-813727deade9",
       "photographer": "Unsplash"
     },
     "new-hvac-system-cost": {
+      "source": "https://unsplash.com/photos/1770306924587-7884ec2753a2",
+      "photographer": "Taylor Friehl"
+    },
+    "average-electric-bill-by-household-size": {
       "source": "https://unsplash.com/photos/1757219525975-03b5984bc6e8",
       "photographer": "Unsplash"
     },
-    "average-electric-bill-by-household-size": {
-      "source": "https://unsplash.com/photos/1773952137490-2bea3f95ed39",
-      "photographer": "proudlyswazi"
-    },
     "cost-to-install-solar-panels": {
-      "source": "https://unsplash.com/photos/1780445392792-556e5609c5ab",
+      "source": "https://unsplash.com/photos/1780445392462-b7761551820c",
       "photographer": "Unsplash"
     },
     "furnace-repair-vs-replace": {
@@ -53,383 +53,383 @@
       "photographer": "proudlyswazi"
     },
     "cost-to-install-attic-insulation": {
-      "source": "https://unsplash.com/photos/1564013799919-ab600027ffc6",
+      "source": "https://unsplash.com/photos/1668097613569-3405bb63262b",
       "photographer": "Unsplash"
     },
     "ac-repair-vs-replace": {
-      "source": "https://unsplash.com/photos/1757219525975-03b5984bc6e8",
+      "source": "https://unsplash.com/photos/1780445392792-556e5609c5ab",
       "photographer": "Unsplash"
     },
     "remove-and-install-attic-insulation": {
-      "source": "https://unsplash.com/photos/1564013799919-ab600027ffc6",
+      "source": "https://unsplash.com/photos/1780445392628-d6f5b9e5609b",
       "photographer": "Unsplash"
     },
     "cost-to-install-central-air-without-ducts": {
-      "source": "https://unsplash.com/photos/1773952137490-2bea3f95ed39",
-      "photographer": "proudlyswazi"
+      "source": "https://unsplash.com/photos/1575299737366-39c143459bc5",
+      "photographer": "Michal Balog"
     },
     "cost-to-replace-water-heater": {
-      "source": "https://unsplash.com/photos/1575299737366-39c143459bc5",
-      "photographer": "Michal Balog"
-    },
-    "cost-to-repipe-a-house-pex-vs-copper": {
-      "source": "https://unsplash.com/photos/1575299737366-39c143459bc5",
-      "photographer": "Michal Balog"
-    },
-    "average-water-bill-by-household-size": {
-      "source": "https://unsplash.com/photos/1575299737366-39c143459bc5",
-      "photographer": "Michal Balog"
-    },
-    "sewer-line-repair-cost": {
-      "source": "https://unsplash.com/photos/1575299737366-39c143459bc5",
-      "photographer": "Michal Balog"
-    },
-    "cost-to-install-water-softener": {
-      "source": "https://unsplash.com/photos/1575299737366-39c143459bc5",
-      "photographer": "Michal Balog"
-    },
-    "cost-to-replace-electrical-panel": {
       "source": "https://unsplash.com/photos/1753272691001-4d68806ac590",
       "photographer": "Unsplash"
     },
-    "cost-to-install-a-generator": {
+    "cost-to-repipe-a-house-pex-vs-copper": {
+      "source": "https://unsplash.com/photos/1773952136583-5175e906267c",
+      "photographer": "proudlyswazi"
+    },
+    "average-water-bill-by-household-size": {
       "source": "https://unsplash.com/photos/1509390144018-eeaf65052242",
       "photographer": "Unsplash"
     },
+    "sewer-line-repair-cost": {
+      "source": "https://unsplash.com/photos/1769745241584-be9b8227e126",
+      "photographer": "Unsplash"
+    },
+    "cost-to-install-water-softener": {
+      "source": "https://unsplash.com/photos/1774437290626-34d18c49598a",
+      "photographer": "Wemel Wood"
+    },
+    "cost-to-replace-electrical-panel": {
+      "source": "https://unsplash.com/photos/1721743138130-e8ce6e1a7dce",
+      "photographer": "Lisa Anna"
+    },
+    "cost-to-install-a-generator": {
+      "source": "https://unsplash.com/photos/1723257891127-0d1ea314a720",
+      "photographer": "Alex Tyson"
+    },
     "cost-to-install-ev-charger": {
-      "source": "https://unsplash.com/photos/1509390144018-eeaf65052242",
+      "source": "https://unsplash.com/photos/1564013799919-ab600027ffc6",
       "photographer": "Unsplash"
     },
     "generator-vs-battery-backup-cost": {
-      "source": "https://unsplash.com/photos/1509390144018-eeaf65052242",
+      "source": "https://unsplash.com/photos/1506905925346-21bda4d32df4",
       "photographer": "Unsplash"
     },
     "cost-to-upgrade-to-200-amp-panel": {
-      "source": "https://unsplash.com/photos/1753272691001-4d68806ac590",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1769977453410-02f774fb8fef",
+      "photographer": "Saifee Art"
     },
     "average-kitchen-remodel-cost": {
-      "source": "https://unsplash.com/photos/1769745241584-be9b8227e126",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1658190579991-65472a8b7b05",
+      "photographer": "Frames For Your Heart"
     },
     "bathroom-remodel-cost-by-size": {
-      "source": "https://unsplash.com/photos/1769745241584-be9b8227e126",
-      "photographer": "Unsplash"
-    },
-    "kitchen-remodel-cost-without-appliances": {
-      "source": "https://unsplash.com/photos/1769745241584-be9b8227e126",
-      "photographer": "Unsplash"
-    },
-    "small-bathroom-remodel-cost": {
-      "source": "https://unsplash.com/photos/1769745241584-be9b8227e126",
-      "photographer": "Unsplash"
-    },
-    "cabinet-refacing-vs-replacement-cost": {
-      "source": "https://unsplash.com/photos/1769745241584-be9b8227e126",
-      "photographer": "Unsplash"
-    },
-    "cost-to-replace-countertops": {
-      "source": "https://unsplash.com/photos/1769745241584-be9b8227e126",
-      "photographer": "Unsplash"
-    },
-    "is-a-kitchen-remodel-worth-it": {
-      "source": "https://unsplash.com/photos/1769745241584-be9b8227e126",
-      "photographer": "Unsplash"
-    },
-    "cost-to-finish-a-basement": {
-      "source": "https://unsplash.com/photos/1564013799919-ab600027ffc6",
-      "photographer": "Unsplash"
-    },
-    "cost-to-paint-a-house": {
-      "source": "https://unsplash.com/photos/1564013799919-ab600027ffc6",
-      "photographer": "Unsplash"
-    },
-    "cost-to-replace-flooring-by-type": {
-      "source": "https://unsplash.com/photos/1687266152952-540777e6e8c8",
-      "photographer": "Unsplash"
-    },
-    "cost-to-add-bathroom-to-basement": {
-      "source": "https://unsplash.com/photos/1564013799919-ab600027ffc6",
-      "photographer": "Unsplash"
-    },
-    "cost-to-replace-interior-doors": {
-      "source": "https://unsplash.com/photos/1769745241584-be9b8227e126",
-      "photographer": "Unsplash"
-    },
-    "drywall-repair-vs-replace-cost": {
-      "source": "https://unsplash.com/photos/1769977453410-02f774fb8fef",
-      "photographer": "Saifee Art"
-    },
-    "is-it-worth-it-to-replace-windows": {
-      "source": "https://unsplash.com/photos/1753717202565-ee088d9871fc",
-      "photographer": "Unsplash"
-    },
-    "mold-remediation-cost-by-square-footage": {
-      "source": "https://unsplash.com/photos/1769977453410-02f774fb8fef",
-      "photographer": "Saifee Art"
-    },
-    "cost-to-remove-a-tree": {
-      "source": "https://unsplash.com/photos/1667830502449-d5a2039204d6",
-      "photographer": "Unsplash"
-    },
-    "average-cost-of-homeowners-insurance": {
-      "source": "https://unsplash.com/photos/1564013799919-ab600027ffc6",
-      "photographer": "Unsplash"
-    },
-    "refrigerator-repair-vs-replace": {
-      "source": "https://unsplash.com/photos/1769745241584-be9b8227e126",
-      "photographer": "Unsplash"
-    },
-    "garage-door-repair-vs-replace": {
-      "source": "https://unsplash.com/photos/1667830502449-d5a2039204d6",
-      "photographer": "Unsplash"
-    },
-    "garage-door-worth-it-before-selling": {
-      "source": "https://unsplash.com/photos/1667830502449-d5a2039204d6",
-      "photographer": "Unsplash"
-    },
-    "termite-damage-repair-cost": {
-      "source": "https://unsplash.com/photos/1769977453410-02f774fb8fef",
-      "photographer": "Saifee Art"
-    },
-    "how-much-value-does-a-pool-add": {
       "source": "https://unsplash.com/photos/1663293761270-8fafc94e2087",
       "photographer": "Zac Gudakov"
     },
-    "annual-home-maintenance-cost-calculator": {
-      "source": "https://unsplash.com/photos/1667830502449-d5a2039204d6",
+    "kitchen-remodel-cost-without-appliances": {
+      "source": "https://unsplash.com/photos/1546668586-fc282cc41974",
       "photographer": "Unsplash"
+    },
+    "small-bathroom-remodel-cost": {
+      "source": "https://unsplash.com/photos/1648475238180-7333e740615d",
+      "photographer": "Bailey Alexander"
+    },
+    "cabinet-refacing-vs-replacement-cost": {
+      "source": "https://unsplash.com/photos/1711214622639-42bb82a167e8",
+      "photographer": "Michael Roberts"
+    },
+    "cost-to-replace-countertops": {
+      "source": "https://unsplash.com/photos/1762117360944-82ad090fffb5",
+      "photographer": "Alef Morais"
+    },
+    "is-a-kitchen-remodel-worth-it": {
+      "source": "https://unsplash.com/photos/1682888818620-94875adf5bb9",
+      "photographer": "Zac Gudakov"
+    },
+    "cost-to-finish-a-basement": {
+      "source": "https://unsplash.com/photos/1682888813788-bf57c360123e",
+      "photographer": "Zac Gudakov"
+    },
+    "cost-to-paint-a-house": {
+      "source": "https://unsplash.com/photos/1771371854543-bb274762389e",
+      "photographer": "Unsplash"
+    },
+    "cost-to-replace-flooring-by-type": {
+      "source": "https://unsplash.com/photos/1724026502211-ff953e813194",
+      "photographer": "Clay Banks"
+    },
+    "cost-to-add-bathroom-to-basement": {
+      "source": "https://unsplash.com/photos/1764526624453-db32c24eca55",
+      "photographer": "Clay Banks"
+    },
+    "cost-to-replace-interior-doors": {
+      "source": "https://unsplash.com/photos/1609986225129-6e4ce51626db",
+      "photographer": "Kelsey Schisler"
+    },
+    "drywall-repair-vs-replace-cost": {
+      "source": "https://unsplash.com/photos/1657728468574-efcc2b7ea634",
+      "photographer": "Thomas Kinto"
+    },
+    "is-it-worth-it-to-replace-windows": {
+      "source": "https://unsplash.com/photos/1607433666172-623ccb406314",
+      "photographer": "Alexandre Maillart"
+    },
+    "mold-remediation-cost-by-square-footage": {
+      "source": "https://unsplash.com/photos/1672679438731-274d4039ebc6",
+      "photographer": "Pascal Meier"
+    },
+    "cost-to-remove-a-tree": {
+      "source": "https://unsplash.com/photos/1706670351471-14d52ffa2e67",
+      "photographer": "Johnny Woods"
+    },
+    "average-cost-of-homeowners-insurance": {
+      "source": "https://unsplash.com/photos/1783125126704-508356c71390",
+      "photographer": "Unsplash"
+    },
+    "refrigerator-repair-vs-replace": {
+      "source": "https://unsplash.com/photos/1783125126717-b3f6942c2014",
+      "photographer": "Unsplash"
+    },
+    "garage-door-repair-vs-replace": {
+      "source": "https://unsplash.com/photos/1517581177682-a085bb7ffb15",
+      "photographer": "Milivoj Kuhar"
+    },
+    "garage-door-worth-it-before-selling": {
+      "source": "https://unsplash.com/photos/1634586648651-f1fb9ec10d90",
+      "photographer": "Stefan Lehner"
+    },
+    "termite-damage-repair-cost": {
+      "source": "https://unsplash.com/photos/1618832515490-e181c4794a45",
+      "photographer": "immo RENOVATION"
+    },
+    "how-much-value-does-a-pool-add": {
+      "source": "https://unsplash.com/photos/1597476817120-9b82cef5ce82",
+      "photographer": "Thayran Melo"
+    },
+    "annual-home-maintenance-cost-calculator": {
+      "source": "https://unsplash.com/photos/1543525324-26e03b510586",
+      "photographer": "charlesdeluvio"
     }
   },
   "format": {
     "roof-replacement-cost": {
-      "source": "https://unsplash.com/photos/1472342139520-1aa49517fed8",
-      "photographer": "davide ragusa"
+      "source": "https://unsplash.com/photos/1599619585752-c3edb42a414c",
+      "photographer": "Karl Solano"
     },
     "roof-repair-vs-replacement": {
-      "source": "https://unsplash.com/photos/1546668586-fc282cc41974",
+      "source": "https://unsplash.com/photos/1707376063186-ee4f90aed78e",
       "photographer": "Unsplash"
     },
     "cost-to-replace-windows": {
-      "source": "https://unsplash.com/photos/1564013799919-ab600027ffc6",
+      "source": "https://unsplash.com/photos/1607320879139-1bb689f6a68f",
       "photographer": "Unsplash"
     },
     "cost-to-install-a-fence": {
-      "source": "https://unsplash.com/photos/1770306924587-7884ec2753a2",
-      "photographer": "Taylor Friehl"
+      "source": "https://unsplash.com/photos/1712806375405-c666c772ea75",
+      "photographer": "Unsplash"
     },
     "gutter-installation-cost": {
-      "source": "https://unsplash.com/photos/1722881445875-bdd5f4d9e6fa",
+      "source": "https://unsplash.com/photos/1656992469668-9ad846745a39",
       "photographer": "Unsplash"
     },
     "metal-roof-vs-asphalt-shingle": {
-      "source": "https://unsplash.com/photos/1763665814605-a6489a3bf2a0",
-      "photographer": "Sergej Karpow"
+      "source": "https://unsplash.com/photos/1656992469482-ff805f493875",
+      "photographer": "Unsplash"
     },
     "cost-to-build-a-deck": {
-      "source": "https://unsplash.com/photos/1704307023984-813727deade9",
+      "source": "https://unsplash.com/photos/1739467561973-e5015d7f9561",
       "photographer": "Unsplash"
     },
     "cost-to-replace-a-driveway": {
-      "source": "https://unsplash.com/photos/1667830502449-d5a2039204d6",
+      "source": "https://unsplash.com/photos/1707376064132-ad067e6f5221",
       "photographer": "Unsplash"
     },
     "hvac-repair-vs-replace": {
-      "source": "https://unsplash.com/photos/1773952137490-2bea3f95ed39",
-      "photographer": "proudlyswazi"
+      "source": "https://unsplash.com/photos/1712806383411-a4edbec75b17",
+      "photographer": "Unsplash"
     },
     "new-hvac-system-cost": {
-      "source": "https://unsplash.com/photos/1773952137490-2bea3f95ed39",
-      "photographer": "proudlyswazi"
+      "source": "https://unsplash.com/photos/1694411046766-96b23ab38a31",
+      "photographer": "Unsplash"
     },
     "average-electric-bill-by-household-size": {
-      "source": "https://unsplash.com/photos/1780445392462-b7761551820c",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1429497419816-9ca5cfb4571a",
+      "photographer": "Danist Soh"
     },
     "cost-to-install-solar-panels": {
-      "source": "https://unsplash.com/photos/1668097613569-3405bb63262b",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1508450859948-4e04fabaa4ea",
+      "photographer": "Tolu Olubode"
     },
     "furnace-repair-vs-replace": {
-      "source": "https://unsplash.com/photos/1757219525975-03b5984bc6e8",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1565008447742-97f6f38c985c",
+      "photographer": "C Dustin"
     },
     "cost-to-install-attic-insulation": {
-      "source": "https://unsplash.com/photos/1773952137490-2bea3f95ed39",
-      "photographer": "proudlyswazi"
+      "source": "https://unsplash.com/photos/1485083269755-a7b559a4fe5e",
+      "photographer": "EJ Yao"
     },
     "ac-repair-vs-replace": {
-      "source": "https://unsplash.com/photos/1773952137490-2bea3f95ed39",
-      "photographer": "proudlyswazi"
+      "source": "https://unsplash.com/photos/1541888946425-d81bb19240f5",
+      "photographer": "Scott Blake"
     },
     "remove-and-install-attic-insulation": {
-      "source": "https://unsplash.com/photos/1757219525975-03b5984bc6e8",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1503387762-592deb58ef4e",
+      "photographer": "Daniel McCullough"
     },
     "cost-to-install-central-air-without-ducts": {
-      "source": "https://unsplash.com/photos/1780445392462-b7761551820c",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1579847188804-ecba0e2ea330",
+      "photographer": "Shivendu Shukla"
     },
     "cost-to-replace-water-heater": {
-      "source": "https://unsplash.com/photos/1780445392462-b7761551820c",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1533378890784-b2a5b0a59d40",
+      "photographer": "Josue Isai Ramos Figueroa"
     },
     "cost-to-repipe-a-house-pex-vs-copper": {
-      "source": "https://unsplash.com/photos/1753272691001-4d68806ac590",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1587582423116-ec07293f0395",
+      "photographer": "Josh Olalde"
     },
     "average-water-bill-by-household-size": {
-      "source": "https://unsplash.com/photos/1780445392462-b7761551820c",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1535732759880-bbd5c7265e3f",
+      "photographer": "James Sullivan"
     },
     "sewer-line-repair-cost": {
-      "source": "https://unsplash.com/photos/1780445392628-d6f5b9e5609b",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1504917595217-d4dc5ebe6122",
+      "photographer": "Christopher Burns"
     },
     "cost-to-install-water-softener": {
-      "source": "https://unsplash.com/photos/1780445392462-b7761551820c",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1531834685032-c34bf0d84c77",
+      "photographer": "Josue Isai Ramos Figueroa"
     },
     "cost-to-replace-electrical-panel": {
-      "source": "https://unsplash.com/photos/1773952136583-5175e906267c",
-      "photographer": "proudlyswazi"
+      "source": "https://unsplash.com/photos/1504307651254-35680f356dfd",
+      "photographer": "Etienne Girardet"
     },
     "cost-to-install-a-generator": {
-      "source": "https://unsplash.com/photos/1773952136583-5175e906267c",
-      "photographer": "proudlyswazi"
+      "source": "https://unsplash.com/photos/1536895058696-a69b1c7ba34f",
+      "photographer": "Nathan Waters"
     },
     "cost-to-install-ev-charger": {
-      "source": "https://unsplash.com/photos/1753272691001-4d68806ac590",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1589939705384-5185137a7f0f",
+      "photographer": "EJ Yao"
     },
     "generator-vs-battery-backup-cost": {
-      "source": "https://unsplash.com/photos/1773952136583-5175e906267c",
-      "photographer": "proudlyswazi"
+      "source": "https://unsplash.com/photos/1484154218962-a197022b5858",
+      "photographer": "Naomi Hebert"
     },
     "cost-to-upgrade-to-200-amp-panel": {
-      "source": "https://unsplash.com/photos/1509390144018-eeaf65052242",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1507089947368-19c1da9775ae",
+      "photographer": "Aaron Huber"
     },
     "average-kitchen-remodel-cost": {
-      "source": "https://unsplash.com/photos/1774437290626-34d18c49598a",
-      "photographer": "Wemel Wood"
+      "source": "https://unsplash.com/photos/1556037843-347ddff9f4b0",
+      "photographer": "Unsplash"
     },
     "bathroom-remodel-cost-by-size": {
-      "source": "https://unsplash.com/photos/1723257891127-0d1ea314a720",
-      "photographer": "Alex Tyson"
+      "source": "https://unsplash.com/photos/1556911220-bff31c812dba",
+      "photographer": "Jason Briscoe"
     },
     "kitchen-remodel-cost-without-appliances": {
-      "source": "https://unsplash.com/photos/1774437290626-34d18c49598a",
-      "photographer": "Wemel Wood"
+      "source": "https://unsplash.com/photos/1556912102-ea493a2a5b93",
+      "photographer": "Creatv Eight"
     },
     "small-bathroom-remodel-cost": {
-      "source": "https://unsplash.com/photos/1721743138130-e8ce6e1a7dce",
-      "photographer": "Lisa Anna"
+      "source": "https://unsplash.com/photos/1565538810643-b5bdb714032a",
+      "photographer": "Christian Mackie"
     },
     "cabinet-refacing-vs-replacement-cost": {
-      "source": "https://unsplash.com/photos/1774437290626-34d18c49598a",
-      "photographer": "Wemel Wood"
+      "source": "https://unsplash.com/photos/1575147270841-b73b888b840c",
+      "photographer": "Unsplash"
     },
     "cost-to-replace-countertops": {
-      "source": "https://unsplash.com/photos/1774437290626-34d18c49598a",
-      "photographer": "Wemel Wood"
+      "source": "https://unsplash.com/photos/1575147271017-7eedb33be791",
+      "photographer": "Unsplash"
     },
     "is-a-kitchen-remodel-worth-it": {
-      "source": "https://unsplash.com/photos/1774437290626-34d18c49598a",
-      "photographer": "Wemel Wood"
+      "source": "https://unsplash.com/photos/1586208958839-06c17cacdf08",
+      "photographer": "Kam Idris"
     },
     "cost-to-finish-a-basement": {
-      "source": "https://unsplash.com/photos/1687266152952-540777e6e8c8",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1588095803059-6e4bbbe24dbb",
+      "photographer": "Haley Truong"
     },
     "cost-to-paint-a-house": {
-      "source": "https://unsplash.com/photos/1667830502449-d5a2039204d6",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1588854337221-4cf9fa96059c",
+      "photographer": "Lotus Design N Print"
     },
     "cost-to-replace-flooring-by-type": {
-      "source": "https://unsplash.com/photos/1564013799919-ab600027ffc6",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1597253276651-44abfcd3012c",
+      "photographer": "Tim Mossholder"
     },
     "cost-to-add-bathroom-to-basement": {
-      "source": "https://unsplash.com/photos/1723257891127-0d1ea314a720",
-      "photographer": "Alex Tyson"
+      "source": "https://unsplash.com/photos/1600489000022-c2086d79f9d4",
+      "photographer": "Collov Home Design"
     },
     "cost-to-replace-interior-doors": {
-      "source": "https://unsplash.com/photos/1774437290626-34d18c49598a",
-      "photographer": "Wemel Wood"
+      "source": "https://unsplash.com/photos/1611066415956-91ab6f1f57cc",
+      "photographer": "immo RENOVATION"
     },
     "drywall-repair-vs-replace-cost": {
-      "source": "https://unsplash.com/photos/1564013799919-ab600027ffc6",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1617228069096-4638a7ffc906",
+      "photographer": "Cat Han"
     },
     "is-it-worth-it-to-replace-windows": {
-      "source": "https://unsplash.com/photos/1564013799919-ab600027ffc6",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1622372738946-62e02505feb3",
+      "photographer": "Kam Idris"
     },
     "mold-remediation-cost-by-square-footage": {
-      "source": "https://unsplash.com/photos/1564013799919-ab600027ffc6",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1627008952576-80b761eb6655",
+      "photographer": "Noithat rakhoi"
     },
     "cost-to-remove-a-tree": {
-      "source": "https://unsplash.com/photos/1770306924587-7884ec2753a2",
-      "photographer": "Taylor Friehl"
+      "source": "https://unsplash.com/photos/1628602813647-c70518049674",
+      "photographer": "Sven Brandsma"
     },
     "average-cost-of-homeowners-insurance": {
-      "source": "https://unsplash.com/photos/1667830502449-d5a2039204d6",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1635424709845-3a85ad5e1f5e",
+      "photographer": "Raze Solar"
     },
     "refrigerator-repair-vs-replace": {
-      "source": "https://unsplash.com/photos/1774437290626-34d18c49598a",
-      "photographer": "Wemel Wood"
+      "source": "https://unsplash.com/photos/1635424709870-cdc6e64f0e20",
+      "photographer": "Raze Solar"
     },
     "garage-door-repair-vs-replace": {
-      "source": "https://unsplash.com/photos/1770306924587-7884ec2753a2",
-      "photographer": "Taylor Friehl"
+      "source": "https://unsplash.com/photos/1635424710928-0544e8512eae",
+      "photographer": "Raze Solar"
     },
     "garage-door-worth-it-before-selling": {
-      "source": "https://unsplash.com/photos/1770306924587-7884ec2753a2",
-      "photographer": "Taylor Friehl"
+      "source": "https://unsplash.com/photos/1635424824800-692767998d07",
+      "photographer": "Raze Solar"
     },
     "termite-damage-repair-cost": {
-      "source": "https://unsplash.com/photos/1564013799919-ab600027ffc6",
-      "photographer": "Unsplash"
+      "source": "https://unsplash.com/photos/1635424824849-1b09bdcc55b1",
+      "photographer": "Raze Solar"
     },
     "how-much-value-does-a-pool-add": {
-      "source": "https://unsplash.com/photos/1658190579991-65472a8b7b05",
-      "photographer": "Frames For Your Heart"
+      "source": "https://unsplash.com/photos/1635424825057-7fb6dcd651ef",
+      "photographer": "Raze Solar"
     },
     "annual-home-maintenance-cost-calculator": {
-      "source": "https://unsplash.com/photos/1770306924587-7884ec2753a2",
-      "photographer": "Taylor Friehl"
+      "source": "https://unsplash.com/photos/1635950638159-90703808aaa5",
+      "photographer": "Michael Foersch"
     }
   },
   "pillar": {
     "roofing-exterior": {
-      "source": "https://unsplash.com/photos/1763665814605-a6489a3bf2a0",
-      "photographer": "Sergej Karpow"
+      "source": "https://unsplash.com/photos/1638704410137-c89efd357c47",
+      "photographer": "Unsplash"
     },
     "hvac-energy": {
-      "source": "https://unsplash.com/photos/1757219525975-03b5984bc6e8",
+      "source": "https://unsplash.com/photos/1668854816699-0882619ea674",
       "photographer": "Unsplash"
     },
     "plumbing": {
-      "source": "https://unsplash.com/photos/1575299737366-39c143459bc5",
-      "photographer": "Michal Balog"
+      "source": "https://unsplash.com/photos/1674755408702-63ae80128709",
+      "photographer": "Unsplash"
     },
     "electrical": {
-      "source": "https://unsplash.com/photos/1753272691001-4d68806ac590",
+      "source": "https://unsplash.com/photos/1694788172474-926345f387d3",
       "photographer": "Unsplash"
     },
     "kitchen-bath": {
-      "source": "https://unsplash.com/photos/1769745241584-be9b8227e126",
+      "source": "https://unsplash.com/photos/1696365070450-43cccd994657",
       "photographer": "Unsplash"
     },
     "interior-renovation": {
-      "source": "https://unsplash.com/photos/1564013799919-ab600027ffc6",
+      "source": "https://unsplash.com/photos/1701850009190-2859ba2aeea6",
       "photographer": "Unsplash"
     },
     "home-maintenance": {
-      "source": "https://unsplash.com/photos/1667830502449-d5a2039204d6",
+      "source": "https://unsplash.com/photos/1702234657992-cfc2e7b690a3",
       "photographer": "Unsplash"
     }
   }
