@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { articles, getPillar, getArticle } from "@/lib/content";
+import { SITE_URL } from "@/lib/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AuthorBio from "@/components/AuthorBio";
 import CostRangeBox from "@/components/CostRangeBox";
@@ -70,8 +71,8 @@ export default async function ArticlePage({ params }: { params: { pillar: string
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `${process.env.NEXT_PUBLIC_SITE_URL || "https://homecostguide.com"}/` },
-      { "@type": "ListItem", position: 2, name: pillar.name, item: `${process.env.NEXT_PUBLIC_SITE_URL || "https://homecostguide.com"}/${pillar.slug}/` },
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+      { "@type": "ListItem", position: 2, name: pillar.name, item: `${SITE_URL}/${pillar.slug}/` },
       { "@type": "ListItem", position: 3, name: article.title },
     ],
   };

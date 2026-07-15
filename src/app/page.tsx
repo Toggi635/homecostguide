@@ -3,6 +3,7 @@ import PillarCard from "@/components/PillarCard";
 import ArticleCard from "@/components/ArticleCard";
 import JsonLd from "@/components/JsonLd";
 import { pillars, getArticlesByTier } from "@/lib/content";
+import { SITE_URL } from "@/lib/site";
 
 export default function HomePage() {
   const topArticles = getArticlesByTier("A");
@@ -11,7 +12,7 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "HomeCostGuide",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://homecostguide.com",
+    url: SITE_URL,
     description: "Get accurate, up-to-date home improvement cost guides with free calculators.",
   };
 
@@ -21,7 +22,7 @@ export default function HomePage() {
     itemListElement: topArticles.map((a, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://homecostguide.com"}/${a.pillar}/${a.slug}/`,
+      url: `${SITE_URL}/${a.pillar}/${a.slug}/`,
     })),
   };
 

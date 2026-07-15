@@ -1,8 +1,9 @@
 import { MetadataRoute } from "next";
 import { pillars, articles } from "@/lib/content";
+import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://homecostguide.com";
+  const baseUrl = SITE_URL;
 
   const staticPages = [
     "/",

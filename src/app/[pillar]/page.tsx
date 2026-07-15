@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { pillars, getPillar, getArticlesByPillar } from "@/lib/content";
+import { SITE_URL } from "@/lib/site";
 import ArticleCard from "@/components/ArticleCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
@@ -29,7 +30,7 @@ export default function PillarPage({ params }: { params: { pillar: string } }) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `${process.env.NEXT_PUBLIC_SITE_URL || "https://homecostguide.com"}/` },
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
       { "@type": "ListItem", position: 2, name: pillar.name },
     ],
   };
@@ -40,7 +41,7 @@ export default function PillarPage({ params }: { params: { pillar: string } }) {
     itemListElement: pillarArticles.map((a, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://homecostguide.com"}/${a.pillar}/${a.slug}/`,
+      url: `${SITE_URL}/${a.pillar}/${a.slug}/`,
     })),
   };
 
