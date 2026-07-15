@@ -67,7 +67,7 @@ export default function PillarPage({ params }: { params: { pillar: string } }) {
 
       <figure className="my-6 rounded-card overflow-hidden border border-line">
         <ArticleImage
-          src={`${ASSET_PATH}/pillar-images/${pillar.slug}.svg`}
+          src={`${ASSET_PATH}/pillar-images/${pillar.slug}.jpg`}
           alt={`${pillar.name} cost guides overview`}
           width={1200}
           height={400}

@@ -356,15 +356,17 @@ function generateFormatVisual(a) {
 </svg>`;
 }
 
-console.log("Generating article images...");
+// NOTE: hero.svg and format.svg are no longer generated here.
+// Real photos are now sourced from Unsplash via scripts/download-photos.mjs.
+// This script only generates the cost.svg data visualization for each article.
+
+console.log("Generating cost visualizations...");
 let count = 0;
 for (const a of ARTICLES) {
   const dir = path.join(OUT, a.slug);
   fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, "hero.svg"), generateHero(a));
   fs.writeFileSync(path.join(dir, "cost.svg"), generateCostVisual(a));
-  fs.writeFileSync(path.join(dir, "format.svg"), generateFormatVisual(a));
   count++;
   if (count % 10 === 0) console.log(`  ${count}/${ARTICLES.length} articles done`);
 }
-console.log(`Done! Generated ${count * 3} images across ${count} articles.`);
+console.log(`Done! Generated ${count} cost.svg files across ${count} articles.`);

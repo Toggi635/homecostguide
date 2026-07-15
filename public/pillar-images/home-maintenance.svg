@@ -2,20 +2,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#6B6459" stop-opacity="0.08"/>
+      <stop offset="0%" stop-color="#6B6459" stop-opacity="0.1"/>
       <stop offset="100%" stop-color="#FAF7F2" stop-opacity="0"/>
     </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.1"/>
+    </filter>
   </defs>
   <rect width="1200" height="400" fill="#FAF7F2"/>
   <rect width="1200" height="400" fill="url(#bg)"/>
   <rect x="0" y="0" width="1200" height="6" fill="#6B6459"/>
-  <circle cx="950" cy="80" r="250" fill="#6B6459" opacity="0.04"/>
-  <circle cx="100" cy="350" r="200" fill="#6B6459" opacity="0.03"/>
-  <text x="80" y="160" font-family="Georgia,'Times New Roman',serif" font-size="38" font-weight="700" fill="#1C2B24">Home Maintenance</text>
+  <circle cx="900" cy="80" r="280" fill="#6B6459" opacity="0.04"/>
+  <circle cx="150" cy="350" r="200" fill="#1C2B24" opacity="0.03"/>
+  <rect x="900" y="100" width="220" height="220" rx="16" fill="#6B6459" opacity="0.05"/>
+  <rect x="920" y="120" width="180" height="12" rx="4" fill="#6B6459" opacity="0.12"/>
+  <rect x="920" y="140" width="130" height="12" rx="4" fill="#6B6459" opacity="0.08"/>
+  <rect x="920" y="170" width="160" height="100" rx="8" fill="#6B6459" opacity="0.06"/>
+  <text x="80" y="160" font-family="Georgia,'Times New Roman',serif" font-size="38" font-weight="700" fill="#1C2B24" filter="url(#shadow)">Home Maintenance</text>
   <text x="80" y="210" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="18" fill="#6B6459">Real cost data, sourced pricing, and expert guides</text>
-  <text x="80" y="240" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="14" fill="#6B6459">Compare prices before you hire a contractor</text>
-  <rect x="80" y="275" width="180" height="40" rx="20" fill="#6B6459" opacity="0.1"/>
-  <text x="170" y="301" text-anchor="middle" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#6B6459">Browse 12 guides</text>
+  <rect x="80" y="250" width="180" height="40" rx="20" fill="#6B6459" opacity="0.12"/>
+  <text x="170" y="276" text-anchor="middle" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#6B6459">Browse guides</text>
   <text x="1140" y="380" text-anchor="end" font-family="Georgia,'Times New Roman',serif" font-size="14" font-weight="600" fill="#6B6459">HomeCostGuide</text>
-  <rect x="250" y="80" width="850" height="270" rx="16" fill="#6B6459" opacity="0.03"/>
 </svg>

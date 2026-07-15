@@ -32,6 +32,14 @@ export function generateMetadata({ params }: { params: { pillar: string; article
     title: article.title,
     description: article.metaDescription,
     alternates: { canonical: `/${article.pillar}/${article.slug}/` },
+    openGraph: {
+      images: [{
+        url: `${SITE_URL}/article-images/${article.slug}/hero.jpg`,
+        width: 1200,
+        height: 630,
+        alt: article.title,
+      }],
+    },
   };
 }
 
@@ -145,7 +153,7 @@ export default async function ArticlePage({ params }: { params: { pillar: string
 
       <figure className="my-6 rounded-card overflow-hidden border border-line">
         <ArticleImage
-          src={`${ASSET_PATH}/article-images/${article.slug}/hero.svg`}
+          src={`${ASSET_PATH}/article-images/${article.slug}/hero.jpg`}
           alt={`${article.title} - National average cost range illustration`}
           width={1200}
           height={630}
@@ -200,7 +208,7 @@ export default async function ArticlePage({ params }: { params: { pillar: string
 
       <figure className="my-8 rounded-card overflow-hidden border border-line">
         <ArticleImage
-          src={`${ASSET_PATH}/article-images/${article.slug}/format.svg`}
+          src={`${ASSET_PATH}/article-images/${article.slug}/format.jpg`}
           alt={`${article.targetKeyword} cost guide overview`}
           width={800}
           height={500}
