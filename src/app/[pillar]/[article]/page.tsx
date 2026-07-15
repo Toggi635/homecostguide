@@ -117,10 +117,10 @@ export default async function ArticlePage({ params }: { params: { pillar: string
       <AuthorBio />
 
       <CostRangeBox
-        label={`National Average ${article.targetKeyword}`}
-        low="{{COST_LOW}}"
-        average="{{COST_AVG}}"
-        high="{{COST_HIGH}}"
+        label={`National Average ${article.targetKeyword}${article.costUnit}`}
+        low={article.costLow}
+        average={article.costAvg}
+        high={article.costHigh}
       />
 
       <AdSlot placement="after-intro" />
